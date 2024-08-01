@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav>
+        <ul class="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+
+    <main data-scroll-container>
+        <section data-scroll-section class="scroll_section">
+            <div class="contents_box">
+                <img src="./images/SVG/logo.svg" class="logo" alt="logomark">
+                <div>
+                    <img src="./images/SVG/head_decora.svg" class="decora" alt="What is DecoRa?">
+                    <p class="concept_write">『DecoRa』には<br>
+                        誰にでもあるでこぼこの「でこ」を見つめて愛したい、<br>
+                        お客様の思いに彩りを加えて「decoration」したいという、<br>
+                        2つの思いを込めています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-scroll-section class="scroll_section">
+            <div class="contents_box">
+                <img src="./images/1x/prof01_pc-80.jpg" class="prof01" alt="プロフィール写真">
+                <div>
+                    <img src="./images/SVG/head_policy.svg" class="policy" alt="My policy">
+                    <p class="policy_write">看護師として、看護教員として、そして母として、わたしが心がけていること。<br>
+                        それは、できないことではなく、できることに目を向けること。<br>
+                        でこぼこの「でこ」、『強み』を引き出すアプローチ。<br>
+                        そしてそれは、デザインをつくるときも同じです。<br>
+                        DecoRa design worksが大切にしたいのは、<br>
+                        事業やサービスの『強み』を引き出し、より魅力的に伝えること。<br>
+                        単なる「デザインをつくる人」ではなく、<br>
+                        あなたや事業とともに走る「パートナー」でありたいと思っています。</p>
+                    <p class="btn_arrow btn01">
+                        <a href="about.html">山本和はどんな人？</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                })
+            })
+        })()
+    </script>
+</body>
+
+</html>

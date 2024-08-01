@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横スクロール - Demo</title>
+    <!-- 横スクロールのJavaScriptライブラリ「Locomotive Scroll」のCSSのCDN -->
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        section.scroll_section {
+            width: 100vw;
+        }
+        .text {
+            display: flex;
+            gap: 50px;
+        }
+        p {
+            white-space: normal !important;
+        }
+        .top_contents {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .top_contents > div {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main data-scroll-container>
+        <section data-scroll-section class="scroll_section">
+            <div class="top_contents">
+                <h1>ページタイトル</h1>
+            </div>
+        </section>
+        <section data-scroll-section class="scroll_section">
+            <div class="top_contents">
+                <div>
+                    <h2>横スクロール</h2>
+                    <div class="text">
+                        <img src="https://placehold.jp/150x150.png">
+                        <p>data-scroll-containerの中に横スクロールにしたいセクションを配置、セクション自体はdata-scroll-sectionという属性を付けます。この、data-scroll-なんちゃらは、独自データ属性というものです。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-scroll-section class="scroll_section">
+            <div class="top_contents">
+                <div>
+                    <h2>JavaScript</h2>
+                    <p>
+                        document.addEventListener〜の記述は、ページが読み込まれた瞬間にJavaScriptを実行するよ、という指定なので、気にしなくてOKです。<br>
+                        new LocomotiveScrollの括弧の中に、設定を書いていきます。
+                    </p>
+                    <ul>
+                        <li>el: 横スクロールの対象とする要素</li>
+                        <li>direction: スクロールの方向(horizontal=水平方向)</li>
+                        <li>smooth: スムーススクロールの指定</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 横スクロールのJavaScriptライブラリ「Locomotive Scroll」のJSのCDN --> 
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+    <!-- JavaScriptで設定を書く必要があります -->
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                })
+            })
+        })()
+    </script>
+</body>
+</html>

@@ -72,12 +72,8 @@
 
         <div id="container">
             <img src="./images/SVG/logo_main.svg" class="logo_top shadow" alt="DecoRa design works">
-            <p class="glowAnime">
-                <span>Hello, and Welcome.</span><br>
-                This website is the Portfolio of Nodoka Yamamoto,<br>
-                a designer based in Imabari City, Ehime.<br>
-                Please see this site as part of my work.
-            </p>
+            <p class="glowAnime">Hello, and Welcome.This website is the Portfolio of Nodoka Yamamoto,a designer based in
+                Imabari City, Ehime.Please see this site as part of my work.</p>
         </div>
     </div>
 
@@ -184,6 +180,7 @@
         $(window).on('load', function () {
             //spanタグを追加する
             var element = $(".glowAnime");
+            console.log(element)
             element.each(function () {
                 var text = $(this).text();
                 var textbox = "";
@@ -191,10 +188,19 @@
                     if (t !== " ") {
                         if (i < 10) {
                             textbox += '<span style="animation-delay: .' + i + 's;">' + t + '</span>';
+                            if (t == '.') {
+                                textbox += '<br>'
+                            }
                         } else {
                             var n = i / 10;
                             textbox += '<span style="animation-delay: ' + n + 's;">' + t + '</span>';
+                            if (t == '.') {
+                                textbox += '<br>'
+                            } else if (i > 35 && i < 115 && t == ',') {
+                                textbox += '<br>'
+                            }
                         }
+
 
                     } else {
                         textbox += t;
@@ -212,7 +218,7 @@
             $("#splash_logo").delay(5000).fadeOut('slow'); stroke.play();//ロゴを1.2秒でフェードアウトする記述
 
             //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-            $("#splash").delay(25000).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+            $("#splash").delay(18000).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
 
                 $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 

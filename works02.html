@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav>
+        <ul class="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <p class="back_btn">
+        <a href="works.html">back page</a>
+    </p>
+
+    <img src="./images/1x/light.png" class="light detail_light" alt="light">
+    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+
+    <main data-scroll-container>
+        <section data-scroll-section class="scroll_section">
+            <div class="detail_container">
+                <div>
+                    <img src="./images/SVG/head_detail.svg" class="detail_img shadow" alt="works detail">
+                    <p><span>LIFE hair design様（架空）</span></p>
+                    <div class="detail_left">
+                        <div>
+                            <p>WEB site</p>
+                        </div>
+                        <div class="detail_right">
+                            <div></div>
+                            <div class="flex">
+                                <p>design</p>
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <p>Adube Illustrator</p>
+                            </div>
+                            <div class="flex">
+                                <p>coding</p>
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <p>VScode</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail_left">
+                        <div>
+                            <p>theme</p>
+                        </div>
+                        <div class="detail_right">
+                            <p>おしゃれ<br>
+                                ライフスタイルに寄り添う<br>
+                                親しみやすさ</p>
+                        </div>
+                    </div>
+                    <p class="btn_arrow btn_detail">
+                        <a href="" target="_blank">visit the site</a>
+                    </p>
+                </div>
+                <div class="works1">
+                    <img src="./images/1x/works02_1-80.jpg" alt="制作実績">
+                    <p>スクールの課題で制作しました。
+                        開店10周年の美容院という課題で、10年という期間、お客様のライフスタイルに寄り添って変化・成長してきたお店であることを表現したいと思いました。<br>
+                        「未来を見つめる20代」「おしゃれを楽しむ40代」「子育てをがんばる30代」という3枚の写真をスライダーにしています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section data-scroll-section class="scroll_section">
+            <div class="detail_column">
+                <img src="./images/1x/works02_2-80.jpg" alt="制作実績">
+                <p>地域で親しまれる、おしゃれで小さな美容院のイメージで制作しています。<br>
+                    ページ全体のデザインが単調にならないよう、かつデザインとしてまとまりを崩さないよう、見出しや写真のバランスを見ながら丁寧にレイアウトしています。<br>
+                    レイアウトに動きがある分、ロゴよりも少しくすませて落ち着きのあるピンクを基調にカラーリングしました。
+                </p>
+            </div>
+        </section>
+
+        <section data-scroll-section class="scroll_section">
+            <div class="detail_flex">
+                <div>
+                    <img src="./images/1x/works02_3-80.jpg" alt="制作実績">
+                    <p>予約導線にもこだわりました。<br>
+                        ページ内のどの位置からも予約やお問い合わせボタンにアクセスできること、お客様目線で知りたい情報がわかりやすく伝わることを意識しています。<br>
+                        画面右の予約・お問い合わせボタンは画面スクロールに追従する固定表示仕様です。
+                    </p>
+                </div>
+                <div>
+                    <img src="./images/1x/works02_4-80.jpg" alt="制作実績">
+                    <p>レスポンシブ表示でも見劣りしないよう、レイアウトや写真の切り方を工夫しました。<br>
+                        複雑な画像配置が特徴のデザインですが、どのデバイスサイズで見ても違和感のないよう、細かくチェックしながらコーディングしています。<br>
+                        スマートフォン版デザインでは、予約とお問い合わせボタンが画面下に固定される仕様です。<br>
+                        デザインだけでなく、機能面もしっかりとレスポンシブ対応にすることを意識して制作しました。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                })
+            })
+        })()
+    </script>
+</body>
+
+</html>

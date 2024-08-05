@@ -51,7 +51,7 @@
   fill-opacity: 0; /*最初は透過0で見えない状態*/
   transition: fill-opacity 1s; /*カラーがつく際のアニメーション0.5秒で変化*/
   fill: none; /*塗りがない状態*/
-  stroke: #fff; /*線の色*/
+  stroke: #666; /*線の色*/
 }
 
 /*アニメーション後に.doneというクラス名がで付与された時の指定*/
@@ -71,6 +71,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 30px;
   flex-wrap: wrap;
   animation-name: fadeInAnime;
   animation-duration: 1s;
@@ -93,15 +94,11 @@ a:hover {
 .glowAnime {
   text-align: center;
   margin: 20px 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2.33;
   font-family: "Montserrat", "Noto Sans JP", san-serif;
-  font-weight: 400;
+  font-weight: 200;
   color: #fff;
-}
-
-.glowAnime span {
-  font-size: 16px;
 }
 
 /*========= 光りながら出現させるためのCSS ===============*/

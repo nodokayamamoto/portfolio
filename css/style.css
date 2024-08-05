@@ -96,6 +96,11 @@ body {
   left: 15%;
 }
 
+.detail_light {
+  left: 20%;
+  bottom: 200px;
+}
+
 .contact_light {
   top: 250px;
   left: 40%;
@@ -167,7 +172,7 @@ body {
   height: 100vh;
   max-width: fit-content;
   align-items: flex-end;
-  margin-left: 20vw;
+  margin-left: 15vw;
 }
 
 .about_box {
@@ -325,6 +330,172 @@ body {
 
 .skills_box ul li {
   padding: 10px 0;
+}
+
+/* works detail-------------------------------------------------------------------- */
+
+/* button */
+
+.back_btn a {
+  position: fixed;
+  bottom: 10vh;
+  right: 10%;
+  display: block;
+  width: 180px;
+  padding: 10px 10px 10px 30px;
+  font-size: 13px;
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.back_btn a::after,
+.back_btn a::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 50px;
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  border-top: 1px solid #fff;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.back_btn:hover a::after {
+  transform: translate(-115%, -50%) rotate(45deg);
+}
+
+.back_btn:hover a::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.back_btn a::after {
+  transform: translate(-100%, -25%) rotate(0deg);
+}
+
+.back_btn a::before {
+  transform: translate(-100%, -25%) rotate(0deg);
+}
+
+/* main contents */
+
+.detail_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 15vh;
+  margin-left: 15vw;
+  margin-right: 20vw;
+}
+
+.detail_img {
+  width: 238px;
+}
+
+.detail_left {
+  display: flex;
+  margin-bottom: 3vh;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.detail_right {
+  border-left: solid 1px #fff;
+  width: 250px;
+  padding-left: 30px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px dotted #fff;
+  width: 100%;
+  margin: 0;
+}
+
+.line {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.detail_left div:first-child {
+  width: 100px;
+  padding: 0 20px;
+}
+
+.detail_container p {
+  margin: 0;
+}
+
+.detail_container p span {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5vh 0 3vh 0;
+}
+
+.works1 p,
+.detail_column p {
+  line-height: 1.78;
+  white-space: wrap;
+  margin-top: 0;
+}
+
+.works1,
+.detail_column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 600px;
+}
+
+.detail_column {
+  justify-content: flex-start;
+  margin-top: 15vh;
+  margin-right: 20vw;
+}
+
+.btn_detail {
+  padding-top: 3vh;
+  transform: translateX(100px);
+}
+
+/* small contents */
+
+.detail_flex {
+  margin-top: 15vh;
+  margin-right: 20vw;
+}
+
+.detail_flex div {
+  display: flex;
+  width: 800px;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.detail_flex img {
+  width: 250px;
+  height: 100%;
+}
+
+.detail_flex div p {
+  white-space: wrap;
+  margin: 0;
+}
+
+.space {
+  transform: translateX(280px);
 }
 
 /* contact------------------------------------------------------------------------- */

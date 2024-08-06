@@ -101,6 +101,11 @@ body {
   bottom: 200px;
 }
 
+.banner_light {
+  top: 200px;
+  right: 20%;
+}
+
 .contact_light {
   top: 250px;
   left: 40%;
@@ -341,8 +346,8 @@ body {
   bottom: 10vh;
   right: 10%;
   display: block;
-  width: 180px;
-  padding: 10px 10px 10px 30px;
+  width: 120px;
+  padding: 10px 10px 10px 35px;
   font-size: 13px;
   color: #fff;
   border: 1px solid #fff;
@@ -358,7 +363,7 @@ body {
   position: absolute;
   top: 25px;
   bottom: 0;
-  left: 50px;
+  left: 40px;
   width: 14px;
   height: 14px;
   margin: auto;
@@ -496,6 +501,44 @@ hr {
 
 .space {
   transform: translateX(280px);
+}
+
+/* banner */
+
+.square {
+  width: 300px;
+}
+
+.rectangle {
+  width: 450px;
+  object-fit: contain;
+}
+
+.banner_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.banner_flex {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.banner_container p {
+  margin: 0;
+}
+
+.banner_container p span {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0;
 }
 
 /* contact------------------------------------------------------------------------- */

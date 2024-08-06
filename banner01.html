@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav>
+        <ul class="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <p class="back_btn">
+        <a href="works.html">back page</a>
+    </p>
+
+    <img src="./images/1x/light.png" class="light banner_light" alt="light">
+    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+
+    <main data-scroll-container>
+        <section data-scroll-section class="scroll_section">
+            <div class="banner_container">
+                <img src="./images/SVG/head_detail.svg" class="detail_img shadow" alt="works detail">
+
+                <div class="banner_flex">
+                    <p><span>Banner Sample</span></p>
+                    <div class="detail_right">
+                        <div></div>
+                        <div class="flex">
+                            <p>design</p>
+                            <div class="line">
+                                <hr>
+                            </div>
+                            <p>Adube Illustrator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner_flex">
+                    <img src="./images/1x/banner01_1.jpg" class="square" alt="Banner Sample">
+                    <img src="./images/1x/banner01_2.jpg" class="rectangle" alt="Banner Sample">
+                </div>
+                <div class="works1">
+                    <p>スクールの課題で制作した、高級感のあるハンバーガーの販促バナーです。<br>
+                        使用した写真素材は、バナーサイズに合わせてAI生成で引き延ばしています。<br>
+                        スポットライトを当てたようなイメージで背景に加工を入れ、ユーザーの目線を商品であるハンバーガーに促しています。<br>
+                        品の良いゴールドのグラデーションで、リッチな雰囲気に仕上げました。
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                })
+            })
+        })()
+    </script>
+</body>
+
+</html>

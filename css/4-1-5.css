@@ -1,5 +1,12 @@
 @charset "utf-8;";
 
+.skip_btn {
+  position: fixed;
+  right: 15%;
+  bottom: 15%;
+  width: 100px;
+}
+
 /* Loading背景画面設定*/
 #splash {
   /*fixedで全面に固定*/

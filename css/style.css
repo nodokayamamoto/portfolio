@@ -116,7 +116,7 @@ body {
 .copy_write {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 5px;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -343,8 +343,8 @@ body {
 
 .back_btn a {
   position: fixed;
-  bottom: 10vh;
-  right: 10%;
+  bottom: 55px;
+  right: 40px;
   display: block;
   width: 120px;
   padding: 10px 10px 10px 35px;
@@ -400,6 +400,15 @@ body {
   margin-right: 20vw;
 }
 
+.detail_container_vw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 100vw;
+  height: 100vh;
+}
+
 .detail_img {
   width: 238px;
 }
@@ -437,11 +446,13 @@ hr {
   padding: 0 20px;
 }
 
-.detail_container p {
+.detail_container p,
+.detail_container_vw p {
   margin: 0;
 }
 
-.detail_container p span {
+.detail_container p span,
+.detail_container_vw p span {
   display: block;
   font-size: 18px;
   font-weight: 600;

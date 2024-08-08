@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav>
+        <ul class="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <p class="back_btn">
+        <a href="works.html">back page</a>
+    </p>
+
+    <img src="./images/1x/light.png" class="light detail_light" alt="light">
+    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+
+    <main data-scroll-container>
+        <section data-scroll-section class="scroll_section">
+            <div class="detail_container">
+                <div>
+                    <img src="./images/SVG/head_detail.svg" class="detail_img shadow" alt="works detail">
+                    <p><span>一般社団法人デイジー様</span></p>
+                    <div class="detail_left">
+                        <div>
+                            <p>Pumphlet</p>
+                        </div>
+                        <div class="detail_right">
+                            <div></div>
+                            <div class="flex">
+                                <p>design</p>
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <p>Adube Illustrator</p>
+                            </div>
+                            <p>text writing</p>
+
+                        </div>
+                    </div>
+                    <div class="detail_left">
+                        <div>
+                            <p>theme</p>
+                        </div>
+                        <div class="detail_right">
+                            <p>のびやか<br>
+                                成長<br>
+                                信頼感
+                            </p>
+                        </div>
+                    </div>
+                    <p>※ 印刷手配まで行っております。</p>
+                </div>
+                <div class="works1">
+                    <img src="./images/1x/works07_1.jpg" alt="一般社団法人デイジー様制作実績">
+                    <p>愛媛県今治市で児童発達支援事業などを運営されている法人様より、パンフレット制作をご依頼いただきました。<br>
+                        子どもたちに、生き生きと楽しく療育を利用してほしい、保護者様には不安なくサービスを利用してほしい。<br>
+                        デザイナーとしてだけではなく、同じく療育利用児を育てる親としての願いも込めた制作となりました。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section data-scroll-section class="scroll_section">
+            <div class="detail_column">
+                <img src="./images/1x/works07_2.jpg" alt="一般社団法人デイジー様制作実績">
+                <p>中面2案、外面3案をご提案しており、デバイス画面ではなく、プリントした紙をご覧いただきながら制作を進めました。<br>
+                    療育利用を検討する保護者様にとって必要な情報と、事業所のアピールポイントを、わかりやすく伝えることを意識しています。<br>
+                    遊びの少ないきっちりとしたレイアウトですが、背景の水彩カラーや手書き風イラストで親しみやすい印象に、またマット紙を使用することで手触りからもやさしい印象が伝わります。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                })
+            })
+        })()
+    </script>
+</body>
+
+</html>

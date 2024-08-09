@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav>
+        <ul id="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <p class="back_btn">
+        <a href="works.html">back page</a>
+    </p>
+
+    <img src="./images/1x/light.png" class="light detail_light" alt="light">
+    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+
+    <main data-scroll-container>
+        <section data-scroll-section class="scroll_section">
+            <div class="detail_container_vw">
+                <div>
+                    <img src="./images/SVG/head_detail.svg" class="detail_img shadow" alt="works detail">
+                    <p><span>しまなみ合気会様</span></p>
+                    <div class="detail_left">
+                        <div>
+                            <p>Flyer</p>
+                        </div>
+                        <div class="detail_right">
+                            <div></div>
+                            <div class="flex">
+                                <p>design</p>
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <p>Adube Illustrator</p>
+                            </div>
+                            <p>text writing</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="works1">
+                    <img src="./images/1x/graphic04_1.jpg" alt="しまなみ合気会様制作実績">
+                    <p>イベント告知用のチラシを制作いたしました。<br>
+                        単なる運動ではなく、日々の生活をよりよくするために体験を広めたいという、クライアント様の思いを形にしています。<br>
+                        実際の生活に役立つ体験であることを、写真やライティングでわかりやすく伝えることを意識してデザインしました。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                })
+            })
+        })()
+    </script>
+</body>
+
+</html>

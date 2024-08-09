@@ -56,15 +56,18 @@ img {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 a:hover,
-button:hover {
+button:hover,
+li:hover {
   cursor: url("../images/1x/cursor_hover.png"), auto;
 }
 
 a:active,
-button:active {
+button:active,
+li:active {
   cursor: url("../images/1x/cursor_click.png"), auto;
 }
 
@@ -81,6 +84,13 @@ button:active {
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
+  transition: all 0.5s;
+  border: #fff solid 1px;
+}
+
+.btn_arrow a:hover {
+  box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3),
+    0 0 0.8em rgba(255, 255, 255, 0.3);
 }
 
 .btn_arrow a::after {

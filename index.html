@@ -89,7 +89,7 @@
         </header>
 
         <nav>
-            <ul class="pc_nav">
+            <ul id="pc_nav">
                 <li><a href="contact.html">contact</a></li>
                 <li><a href="works.html">works</a></li>
                 <li><a href="about.html">about</a></li>
@@ -183,35 +183,7 @@
         // 画面が読み込まれたらすぐに動かしたい場合の記述
         $(window).on('load', function () {
             //spanタグを追加する
-            var element = $(".glowAnime");
-            console.log(element)
-            element.each(function () {
-                var text = $(this).text();
-                var textbox = "";
-                text.split('').forEach(function (t, i) {
-                    if (t !== " ") {
-                        if (i < 10) {
-                            textbox += '<span style="animation-delay: .' + i + 's;">' + t + '</span>';
-                            if (t == '.') {
-                                textbox += '<br>'
-                            }
-                        } else {
-                            var n = i / 10;
-                            textbox += '<span style="animation-delay: ' + n + 's;">' + t + '</span>';
-                            if (t == '.') {
-                                textbox += '<br>'
-                            } else if (i > 35 && i < 115 && t == ',') {
-                                textbox += '<br>'
-                            }
-                        }
 
-
-                    } else {
-                        textbox += t;
-                    }
-                });
-                $(this).html(textbox);
-            });
 
             GlowAnimeControl();/* アニメーション用の関数を呼ぶ*/
         });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
@@ -220,6 +192,37 @@
 
         $(window).on('load', function () {
             $("#splash_logo").delay(5000).fadeOut('slow'); stroke.play();//ロゴを1.2秒でフェードアウトする記述
+            var element = $(".glowAnime");
+            console.log(element)
+            setTimeout(function () {
+                element.each(function () {
+                    var text = $(this).text();
+                    var textbox = "";
+                    text.split('').forEach(function (t, i) {
+                        if (t !== " ") {
+                            if (i < 10) {
+                                textbox += '<span style="animation-delay: .' + i + 's;">' + t + '</span>';
+                                if (t == '.') {
+                                    textbox += '<br>'
+                                }
+                            } else {
+                                var n = i / 10;
+                                textbox += '<span style="animation-delay: ' + n + 's;">' + t + '</span>';
+                                if (t == '.') {
+                                    textbox += '<br>'
+                                } else if (i > 35 && i < 115 && t == ',') {
+                                    textbox += '<br>'
+                                }
+                            }
+
+
+                        } else {
+                            textbox += t;
+                        }
+                    });
+                    $(this).html(textbox);
+                })
+            }, 5000)
 
             //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
             $("#splash").delay(18000).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述

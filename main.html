@@ -7,9 +7,11 @@
     <title>DecoRa design works</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,12 +27,24 @@
         </ul>
     </nav>
 
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
     <img src="./images/1x/light.png" class="light main_light" alt="light">
     <p class="copy_write">©DecoRa design works all rights reserved.</p>
 
     <main data-scroll-container>
         <section data-scroll-section class="scroll_section">
-            <div class="contents_box">
+            <div class="contents_box fadeUp">
                 <img src="./images/SVG/logo.svg" class="logo" alt="logomark">
                 <div>
                     <img src="./images/SVG/head_decora.svg" class="decora shadow" alt="What is DecoRa?">
@@ -43,18 +57,21 @@
         </section>
 
         <section data-scroll-section class="scroll_section">
-            <div class="contents_box">
+            <div class="contents_box second_contents">
+                <img src="./images/SVG/head_policy.svg" class="policy shadow pc_hidden" alt="My policy">
                 <img src="./images/1x/prof01_pc-80.jpg" class="prof01" alt="プロフィール写真">
                 <div>
-                    <img src="./images/SVG/head_policy.svg" class="policy shadow" alt="My policy">
-                    <p class="policy_write">看護師として、看護教員として、そして母として、わたしが心がけていること。<br>
-                        それは、できないことではなく、できることに目を向けること。<br>
-                        でこぼこの「でこ」、『強み』を引き出すアプローチ。<br>
-                        そしてそれは、デザインをつくるときも同じです。<br>
+                    <img src="./images/SVG/head_policy.svg" class="policy shadow sp_hidden" alt="My policy">
+                    <p class="policy_write">看護師として、<br class="pc_hidden">看護教員として、<br class="pc_hidden">そして母として、<br
+                            class="pc_hidden">わたしが心がけていること。<br><br class="pc_hidden">
+                        それは、<br class="pc_hidden">できないことではなく、<br class="pc_hidden">できることに目を向けること。<br><br
+                            class="pc_hidden">
+                        でこぼこの「でこ」、<br class="pc_hidden">『強み』を引き出すアプローチ。<br><br class="pc_hidden">
+                        そしてそれは、<br class="pc_hidden">デザインをつくるときも同じです。<br><br class="pc_hidden">
                         DecoRa design worksが大切にしたいのは、<br>
-                        事業やサービスの『強み』を引き出し、より魅力的に伝えること。<br>
+                        事業やサービスの『強み』を引き出し、<br class="pc_hidden">より魅力的に伝えること。<br><br class="pc_hidden">
                         単なる「デザインをつくる人」ではなく、<br>
-                        あなたや事業とともに走る「パートナー」でありたいと思っています。</p>
+                        あなたや事業とともに走る<br class="pc_hidden">「パートナー」でありたいと思っています。</p>
                     <p class="btn_arrow btn01">
                         <a href="about.html">山本和はどんな人？</a>
                     </p>
@@ -66,17 +83,34 @@
     <script src="
 https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
 "></script>
-
     <script>
-        (() => {
-            document.addEventListener('DOMContentLoaded', () => {
-                new LocomotiveScroll({
-                    el: document.querySelector('[data-scroll-container]'),
-                    direction: 'horizontal',
-                    smooth: true,
-                })
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle();
+                $('#sp_btn').toggleClass('open');
             })
-        })()
+        })
+    </script>
+    <script>
+
+            (() => {
+                document.addEventListener('DOMContentLoaded', () => {
+                    new LocomotiveScroll({
+                        el: document.querySelector('[data-scroll-container]'),
+                        direction: 'horizontal',
+                        smooth: true,
+                        tablet: {
+                            direction: 'horizontal',
+                            smooth: true,
+                        },
+                        smartphone: {
+                            direction: 'vertical',
+                            smooth: true,
+                        }
+                    })
+                })
+            })()
+
     </script>
 </body>
 

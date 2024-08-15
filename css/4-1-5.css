@@ -1,12 +1,5 @@
 @charset "utf-8;";
 
-.skip_btn {
-  position: fixed;
-  bottom: 55px;
-  right: 40px;
-  width: 100px;
-}
-
 /* Loading背景画面設定*/
 #splash {
   /*fixedで全面に固定*/
@@ -193,5 +186,30 @@ body.appear #main_container {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.skip {
+  position: fixed;
+  bottom: 5vh;
+  right: 10%;
+}
+
+@media screen and (max-width: 767px) {
+  #splash_logo svg {
+    width: 268px;
+  }
+
+  .logo_top {
+    width: 226px;
+  }
+
+  .glowAnime {
+    font-size: 10px;
+  }
+
+  .skip {
+    right: 50%;
+    transform: translate(50%);
   }
 }

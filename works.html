@@ -7,6 +7,7 @@
     <title>DecoRa design works</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
@@ -26,8 +27,20 @@
         </ul>
     </nav>
 
-    <nav>
-        <ul class="filter-list">
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
+    <nav class="sp_hidden">
+        <ul class="filter-list pc_filter">
             <li><a href="">category</a></li>
             <ul class="popup">
                 <li data-filter="all" class="is-active">All</li>
@@ -38,14 +51,25 @@
         </ul>
     </nav>
 
+    <nav class="pc_hidden">
+        <ul class="filter-list sp_filter">
+            <li data-filter="all" class="is-active">All</li>
+            <li data-filter="web">WEB site</li>
+            <li data-filter="banner">Banner</li>
+            <li data-filter="graphic">Graphic</li>
+        </ul>
+    </nav>
+
     <img src="./images/1x/light.png" class="light works_light" alt="light">
     <p class="copy_write">©DecoRa design works all rights reserved.</p>
 
+    <img src="./images/SVG/head_works.svg" class="works_head fadeUp shadow pc_hidden" alt="What i've done">
     <main data-scroll-container>
         <section data-scroll-section class="scroll_section">
-            <div class="works_wrap">
+            <div class="works_wrap fadeUp">
+                <img src="./images/SVG/head_works.svg" class="works_head shadow sp_hidden" alt="What i've done">
                 <ul class="filter-item">
-                    <li data-item="web">
+                    <li data-item='["web","graphic"]'>
                         <a href="works01.html">
                             <div>
                                 <div class="works_img">
@@ -174,7 +198,7 @@
                                 <div class="works_img">
                                     <img src="./images/1x/works04.png" alt="works04">
                                 </div>
-                                <p><span>WORKERS様（架空）</span></p>
+                                <p><span>DESIGN CAFE様（架空）</span></p>
                                 <p>WEBsite</p>
                             </div>
                         </a>
@@ -185,7 +209,18 @@
                                 <div class="works_img">
                                     <img src="./images/1x/works05.png" alt="works05">
                                 </div>
-                                <p><span>DESIGN CAFE様（架空）</span></p>
+                                <p><span>WORKERS様（架空）</span></p>
+                                <p>WEBsite</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="web">
+                        <a href="works06.html">
+                            <div>
+                                <div class="works_img">
+                                    <img src="./images/1x/works06.png" alt="works05">
+                                </div>
+                                <p><span>FiTRiSE様（架空）</span></p>
                                 <p>WEBsite</p>
                             </div>
                         </a>
@@ -209,15 +244,33 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 "></script>
 
     <script>
-        (() => {
-            document.addEventListener('DOMContentLoaded', () => {
-                new LocomotiveScroll({
-                    el: document.querySelector('[data-scroll-container]'),
-                    direction: 'horizontal',
-                    smooth: true,
-                })
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle();
+                $('#sp_btn').toggleClass('open');
             })
-        })()
+        })
+
+    </script>
+
+    <script>
+            (() => {
+                document.addEventListener('DOMContentLoaded', () => {
+                    new LocomotiveScroll({
+                        el: document.querySelector('[data-scroll-container]'),
+                        direction: 'horizontal',
+                        smooth: true,
+                        tablet: {
+                            direction: 'horizontal',
+                            smooth: true,
+                        },
+                        smartphone: {
+                            direction: 'horizontal',
+                            smooth: true,
+                        }
+                    })
+                })
+            })()
     </script>
     <script>
         $(function () {

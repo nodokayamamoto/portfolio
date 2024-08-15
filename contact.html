@@ -7,6 +7,8 @@
     <title>DecoRa design works</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,18 +24,31 @@
         </ul>
     </nav>
 
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
     <img src="./images/1x/light.png" class="light contact_light" alt="light">
     <p class="copy_write">©DecoRa design works all rights reserved.</p>
 
     <main>
         <section id="contact">
-            <div class="contact_container">
+            <div class="contact_container fadeUp">
                 <div>
                     <div>
                         <img src="./images/SVG/head_contact.svg" class="contact_img shadow" alt="Work with me!">
                     </div>
                     <div>
-                        <p>ご依頼、ご相談、雑談…なんでもお気軽にご連絡ください</p>
+                        <p>ご依頼、ご相談、雑談…<br>
+                            なんでもお気軽にご連絡ください</p>
                     </div>
                 </div>
                 <form class="c-form"
@@ -58,6 +73,16 @@
             </div>
         </section>
     </main>
+
+    <script>
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle();
+                $('#sp_btn').toggleClass('open');
+            })
+        })
+
+    </script>
 </body>
 
 </html>

@@ -7,9 +7,11 @@
     <title>DecoRa design works</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,12 +27,24 @@
         </ul>
     </nav>
 
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
     <img src="./images/1x/light.png" class="light about_light" alt="light">
     <p class="copy_write">©DecoRa design works all rights reserved.</p>
 
     <main data-scroll-container>
         <section data-scroll-section class="scroll_section">
-            <div class="about_wrap">
+            <div class="about_wrap fadeUp">
                 <div class="about_box">
                     <img src="./images/SVG/head_about.svg" class="about_me shadow" alt="about me">
                     <img src="./images/1x/prof02_pc-80.jpg" class="prof02" alt="プロフィール写真">
@@ -53,7 +67,87 @@
         </section>
 
         <section data-scroll-section class="scroll_section">
-            <div class="bio_wrap">
+
+            <!-- <ul class="bio_timeline">
+                <li>
+                    <dl>
+                        <dt>1988.8.30</dt>
+                        <dd>愛媛県今治市で誕生</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>とにかくうるさい幼少期</dt>
+                        <dd>親曰く「起きてる間はずっとしゃべるか歌うかしてる子どもだった」<br>
+                            物心ついたときから、なぜか自分は『かんごふさん』になるものだと思っていた。</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>陰キャラ炸裂中学生期</dt>
+                        <dd>突如独学でサイト制作を始める。<br>
+                            Windowsのメモ帳で毎日ちまちまコードを書いていた。<br>
+                            なぜそれをしようと思ったのかは一切覚えていない。</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>尖りに尖った高校生期</dt>
+                        <dd>進学校だったにもかかわらず勉強はまったくせず、学年で下から3番目の成績をマークするなどしていた（下位の2人は試験日欠席だったことがのちに発覚）<br>
+                            「出身校は誰にも言うな」と言われながら高校卒業。</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>大学生というよりバンドマン期</dt>
+                        <dd>ドラマ『オレンジデイズ』に憧れて大学へ進学。芝生で寝ている子もバイオリンを弾いてる子もおらず（そもそも芝生がなかった）衝撃を受ける。<br>
+                            勉強そっちのけでバンド活動ばかりしており、相変わらずWindowsメモ帳でバンドのHPを制作していた。<br>
+                            「卒業生を名乗るな」と言われながら大学卒業。</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>白衣の天使（人生の荒波）期</dt>
+                        <dd>就職後は看護師として意外にも真面目に働く。<br>
+                            患者さんからは新人時代からベテランに間違われていた（老けていた）<br>
+                            結婚し、2016長男出産するも、音の速さで離婚。<br>
+                            地元に戻った直後、同僚に交際0日でプロポーズされ、光の速さで再婚。</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>ワーカホリック教員期</dt>
+                        <dd>「看護が好きな看護師を育てたい」という熱い思いを胸に看護学校の教員に転職。<br>
+                            学生ひとりひとりの長所を見つけて伸ばす大切さを知る。<br>
+                            寝食を忘れて仕事に没頭。</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>働き方改革期</dt>
+                        <dd>2020次男、2023長女出産<br>
+                            育児と仕事のバランスがとれず退職。<br>
+                            働き方を模索するうち、若かりし頃に独学でWEB制作をしていた記憶がよみがえる。<br>
+                            デザインとコーディングを一から学び直し、デザイナーとして活動を始める。</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+                <li>
+                    <dl>
+                        <dt>2024.03.05</dt>
+                        <dd>DecoRa design works開業</dd>
+                    </dl>
+                    <span class="border-line"></span>
+                </li>
+            </ul> -->
+            <div class="bio_wrap fadeUp">
                 <img src="./images/SVG/head_bio.svg" class="bio shadow" alt="Biography">
                 <div class="bio_container">
                     <div></div>
@@ -64,43 +158,43 @@
                     <div>
                         <p><span>とにかくうるさい幼少期</span><br class="space">
                             親曰く「起きてる間はずっとしゃべるか歌うかしてる子どもだった」<br>
-                            物心ついたときからなぜか自分は『かんごふさん』になるものだと思っていた。</p>
+                            物心ついたときから、なぜか自分は『かんごふさん』になるものだと思っていた。</p>
                     </div>
                     <div>
                         <p><span>陰キャラ炸裂中学生期</span><br class="space">
-                            気づいたら独学でサイト制作をしており、Windowsのメモ帳で毎日ちまちまコードを書いていた。<br>
+                            突如独学でサイト制作を始める。<br>
+                            Windowsのメモ帳で毎日ちまちまコードを書いていた。<br>
                             なぜそれをしようと思ったのかは一切覚えていない。</p>
                     </div>
                     <div>
                         <p><span>尖りに尖った高校生期</span><br class="space">
                             進学校だったにもかかわらず勉強はまったくせず、学年で下から3番目の成績をマークするなどしていた（下位の2人は試験日欠席だったことがのちに発覚）<br>
-                            「お前みたいなもんが行く学校はない」と言う担任を見返すため、受験勉強だけブーストをかけ国立大学に合格。<br>
                             「出身校は誰にも言うな」と言われながら高校卒業。</p>
                     </div>
                     <div>
                         <p><span>大学生というよりバンドマン期</span><br class="space">
                             ドラマ『オレンジデイズ』に憧れて大学へ進学。芝生で寝ている子もバイオリンを弾いてる子もおらず（そもそも芝生がなかった）衝撃を受ける。<br>
-                            勉強そっちのけでバンド活動ばかりしており、相変わらずWindowsメモ帳でちまちまとバンドのHPを制作していた。<br>
+                            勉強そっちのけでバンド活動ばかりしており、相変わらずWindowsメモ帳でバンドのHPを制作していた。<br>
                             「卒業生を名乗るな」と言われながら大学卒業。</p>
                     </div>
                     <div>
                         <p><span>白衣の天使（人生の荒波）期</span><br class="space">
                             就職後は看護師として意外にも真面目に働く。<br>
-                            患者さんからは新人時代から「ベテランさんなのね」と言われるなどしていた（老けていた）<br>
-                            長年付き合った男性と結婚し、2016長男出産するも、音の速さで離婚。<br>
-                            地元に出戻った直後、同僚に交際0日でプロポーズされ、光の速さで再婚。</p>
+                            患者さんからは新人時代からベテランに間違われていた（老けていた）<br>
+                            結婚し、2016長男出産するも、音の速さで離婚。<br>
+                            地元に戻った直後、同僚に交際0日でプロポーズされ、光の速さで再婚。</p>
                     </div>
                     <div>
                         <p><span>ワーカホリック教員期</span><br class="space">
                             「看護が好きな看護師を育てたい」という熱い思いを胸に看護学校の教員に転職。<br>
-                            個性ゆたかな学生たちに翻弄されながらも、ひとりひとりの長所を見つけて伸ばす大切さを知る。<br>
-                            元々熱中すると寝食を忘れて打ち込む傾向があり、起きている間ずっと仕事状態だった。</p>
+                            学生ひとりひとりの長所を見つけて伸ばす大切さを知る。<br>
+                            寝食を忘れて仕事に没頭。</p>
                     </div>
                     <div>
                         <p><span>働き方改革期</span><br class="space">
                             2020次男、2023長女出産<br>
-                            バリバリのワーキングマザーを目指すも、子どもたちの発達特性が次々に発覚し、育児と仕事のバランスがとれず退職を決意。<br>
-                            働き方を模索するうち、若かりし頃にWEB制作をしていた記憶がよみがえる。<br>
+                            育児と仕事のバランスがとれず退職。<br>
+                            働き方を模索するうち、若かりし頃に独学でWEB制作をしていた記憶がよみがえる。<br>
                             デザインとコーディングを一から学び直し、デザイナーとして活動を始める。</p>
                     </div>
                     <div>
@@ -155,15 +249,67 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 "></script>
 
     <script>
-        (() => {
-            document.addEventListener('DOMContentLoaded', () => {
-                new LocomotiveScroll({
-                    el: document.querySelector('[data-scroll-container]'),
-                    direction: 'horizontal',
-                    smooth: true,
-                })
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle();
+                $('#sp_btn').toggleClass('open');
             })
-        })()
+        })
+
+        // //線が伸びるための設定を関数でまとめる
+        // function ScrollTimelineAnime() {
+        //     $('.bio_timeline li').each(function () {// それぞれのli要素の
+        //         var elemPos = $(this).offset().left;// 上からの高さ取得*左
+        //         var scroll = $(window).scrollTop();// スクロール値取得
+        //         var windowWidth = $(window).width();// windowの高さ取得*幅
+        //         var startPoint = 100; //線をスタートさせる位置を指定※レイアウトによって調整してください
+        //         if (scroll >= elemPos - windowWidth - startPoint) {
+        //             var W = $(this).outerWidth(true)//liの余白と高さを含めた数値を取得
+        //             //スクロール値から要素までの高さを引いた値を、liの高さの半分のパーセントで出す
+        //             var percent = (scroll + startPoint - elemPos) / (W / 2) * 100;//liの余白と高さの半分で線を100％に伸ばす
+
+        //             // 100% を超えたらずっと100%を入れ続ける
+        //             if (percent > 100) {
+        //                 percent = 100;
+        //             }
+        //             // ボーダーの長さをセット
+        //             $(this).children('.border-line').css({
+        //                 width: percent + "%", //CSSでパーセント指定
+        //             });
+        //         }
+        //     });
+        // }
+
+        // // 画面をスクロールをしたら動かしたい場合の記述
+        // $(window).on('scroll', function () {
+        //     ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
+        // });
+
+        // // ページが読み込まれたらすぐに動かしたい場合の記述
+        // $(window).on('load', function () {
+        //     ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
+        // });
+
+    </script>
+    <script>
+
+            (() => {
+                document.addEventListener('DOMContentLoaded', () => {
+                    new LocomotiveScroll({
+                        el: document.querySelector('[data-scroll-container]'),
+                        direction: 'horizontal',
+                        smooth: true,
+                        tablet: {
+                            direction: 'horizontal',
+                            smooth: true,
+                        },
+                        smartphone: {
+                            direction: 'vertical',
+                            smooth: true,
+                        }
+                    })
+                })
+            })()
     </script>
 </body>
 

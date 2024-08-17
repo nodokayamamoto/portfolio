@@ -397,7 +397,7 @@
   .filter-list.sp_filter {
     position: fixed;
     left: 50%;
-    bottom: 10vh;
+    bottom: 7vh;
     transform: translate(-50%);
     display: flex;
     justify-content: center;
@@ -439,6 +439,7 @@
 
   .filter-item {
     height: 475px;
+    gap: 30px;
   }
 
   .filter-item li {

@@ -89,10 +89,10 @@ a:hover {
 .glowAnime {
   text-align: center;
   margin: 20px 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2.33;
   font-family: "Montserrat", "Noto Sans JP", san-serif;
-  font-weight: 200;
+  font-weight: 100;
   color: #fff;
 }
 
@@ -104,7 +104,7 @@ a:hover {
 
 /*アニメーションで透過を0から1に変化させtext-shadowをつける*/
 .glowAnime.glow span {
-  animation: glow_anime_on 1s ease-out forwards;
+  animation: glow_anime_on 0.5s ease-out forwards;
 }
 
 @keyframes glow_anime_on {

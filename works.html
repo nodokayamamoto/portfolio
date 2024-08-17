@@ -63,14 +63,18 @@
     <img src="./images/1x/light.png" class="light works_light" alt="light">
     <p class="copy_write">©DecoRa design works all rights reserved.</p>
 
-    <img src="./images/SVG/head_works.svg" class="works_head fadeUp shadow pc_hidden" alt="What i've done">
-    <main data-scroll-container>
+    <h2>
+        <img src="./images/SVG/head_works.svg" class="works_head fadeUp shadow pc_hidden" alt="What i've done">
+    </h2>
+    <main data-scroll-container class="fadeUp">
         <section data-scroll-section class="scroll_section">
-            <div class="works_wrap fadeUp">
-                <img src="./images/SVG/head_works.svg" class="works_head shadow sp_hidden" alt="What i've done">
+            <div class="works_wrap">
+                <h2>
+                    <img src="./images/SVG/head_works.svg" class="works_head shadow sp_hidden" alt="What i've done">
+                </h2>
                 <ul class="filter-item">
-                    <li data-item='["web","graphic"]'>
-                        <a href="works01.html">
+                    <li data-item="web,graphic">
+                        <a href=" works01.html">
                             <div>
                                 <div class="works_img">
                                     <div class="wimg src1"></div>
@@ -230,6 +234,7 @@
         </section>
         <section data-scroll-section class="scroll_section">
             <div class="works_wrap margin">
+                <h2></h2>
                 <p>このほかにも実績多数ございます。<br>
                     詳しくはお問い合わせください。</p>
                 <p class="btn_arrow">
@@ -272,6 +277,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 })
             })()
     </script>
+
     <script>
         $(function () {
             $(".filter-list").hover(
@@ -285,7 +291,9 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 }
             );
         });
+    </script>
 
+    <script>
         $(function () {
             var $filter = $('.filter-list [data-filter]')
             var $item = $(('.filter-item [data-item]'))
@@ -307,11 +315,13 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     })
                 } else {
                     $item.removeClass('is-active').fadeOut().promise().done(function () {
-                        $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-active').fadeIn()
+                        $item.filter(function () {
+                            var categories = $(this).data('item').split(',')
+                            return categories.includes($filterItem)
+                        }).addClass('is-active').fadeIn()
                     })
                 }
             })
-
         })
     </script>
 </body>

@@ -3,6 +3,15 @@
 @media screen and (max-width: 767px) {
   body {
     background-image: url("../images/2x/back_sp@2x-80.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+
+  main {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .pc_hidden {
@@ -188,12 +197,16 @@
   .contents_box {
     flex-direction: column;
     height: 80vh;
+    width: 80vw;
+    margin: 0 auto;
     gap: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10vh;
   }
 
   .second_contents {
     height: fit-content;
-    padding-bottom: 150px;
   }
 
   .contents_box div {
@@ -216,7 +229,7 @@
   /* policy */
 
   .prof01 {
-    width: 300px;
+    width: 90%;
   }
 
   .policy {
@@ -230,23 +243,24 @@
 
   .btn01 {
     transform: translateX(0px);
+    margin-bottom: 80px;
   }
 
   /* about--------------------------------------------------------------------------- */
 
   .about_wrap {
-    width: 100vw;
+    width: 80vw;
     height: fit-content;
-    margin-top: 100px;
-    margin-left: 0;
+    margin: 100px auto;
   }
 
   .about_box {
     height: fit-content;
-    width: 100vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     gap: 60px;
   }
 
@@ -261,12 +275,15 @@
 
   .prof02 {
     width: 75vw;
+    position: absolute;
+    right: -25px;
+    top: 0;
   }
 
   .about_detail {
-    width: 100vw;
+    width: 100%;
     text-align: center;
-    margin-bottom: 100px;
+    margin-top: 180px;
   }
 
   .about_name {
@@ -285,10 +302,10 @@
   .scroll {
     width: 190px;
     transform: rotate(-90deg);
-    transform-origin: left top;
+    transform-origin: right top;
     position: absolute;
-    bottom: -100px;
-    left: 5vw;
+    bottom: 0;
+    right: 25px;
   }
 
   /* biography */
@@ -297,7 +314,8 @@
     align-items: center;
     gap: 50px;
     height: fit-content;
-    width: 100vw;
+    width: 70vw;
+    margin: 0 auto;
   }
 
   .bio {
@@ -312,7 +330,7 @@
 
   .bio_container div {
     height: fit-content;
-    width: 50vw;
+    width: 80%;
     padding: 0 20% 50px 20%;
     border-left: 1px dashed #fff;
     border-right: none;
@@ -353,8 +371,7 @@
   .skills_wrap {
     height: fit-content;
     align-items: center;
-    margin-right: 0;
-    padding: 50px 0 150px 0;
+    margin: 0 auto;
   }
 
   .skills_container {
@@ -368,7 +385,7 @@
     width: 43px;
     position: absolute;
     top: 0;
-    left: 5vw;
+    left: 25px;
   }
 
   .skills_box p,

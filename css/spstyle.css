@@ -414,22 +414,8 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .works_wrap {
-    height: 100vh;
-    width: fit-content;
-    margin-left: 20vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
-  }
-
   .works_head {
-    position: fixed;
-    top: 0;
-    left: 50%;
     width: 30px;
-    transform: translate(-50%) rotate(90deg) !important;
   }
 
   .margin {

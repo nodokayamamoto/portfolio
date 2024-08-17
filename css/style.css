@@ -8,6 +8,10 @@ body {
   background-attachment: fixed;
 }
 
+.scroll-section {
+  width: fit-content;
+}
+
 .pc_hidden {
   display: none;
 }

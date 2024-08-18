@@ -520,14 +520,14 @@
     align-items: flex-start;
     justify-content: center;
     height: fit-content;
-    width: 70vw;
+    width: 80vw;
     gap: 80px;
     margin: 0 auto;
   }
 
   .vw {
     align-items: center;
-    width: 70vw;
+    width: 80vw;
     margin: 0 auto;
   }
 
@@ -545,8 +545,8 @@
   }
 
   .detail_left div:first-child {
-    width: 15vw;
-    padding: 0 15px 0 0;
+    width: 20vw;
+    padding: 0 20px 0 0;
   }
 
   .flex {
@@ -558,7 +558,7 @@
   .detail_right {
     border-left: solid 1px #fff;
     width: 50vw;
-    padding-left: 15px;
+    padding-left: 20px;
     white-space: nowrap;
   }
 
@@ -585,7 +585,7 @@
 
   .detail_first,
   .detail_column {
-    width: 70vw;
+    width: 80vw;
     margin: 0 auto;
   }
 

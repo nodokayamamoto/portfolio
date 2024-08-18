@@ -430,11 +430,11 @@
   .filter-list.sp_filter {
     position: fixed;
     left: 50%;
-    bottom: 20px;
+    bottom: 30px;
     transform: translate(-50%);
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 3%;
     white-space: nowrap;
     z-index: 3;
   }

@@ -416,25 +416,25 @@
   /* works--------------------------------------------------------------------------- */
 
   .works_wrap {
-    height: 100vh;
-    width: fit-content;
-    padding-top: 20vh;
-    padding-left: 50px;
+    height: max-content;
+    width: 225px;
+    padding-top: 100px;
+    padding-left: 20px;
     padding-right: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     margin: 0 auto;
   }
 
   .filter-list.sp_filter {
     position: fixed;
-    left: 50%;
+    right: 0;
     bottom: 30px;
-    transform: translate(-50%);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     gap: 8px;
     white-space: nowrap;
     z-index: 3;
@@ -442,6 +442,7 @@
 
   .filter-list.sp_filter li {
     border: 1px solid #fff;
+    border-right: none;
     line-height: 2.8;
     padding: 0 10px;
     box-sizing: border-box;
@@ -459,18 +460,17 @@
 
   .margin {
     width: 250px;
-    margin-top: 15vh;
-    margin-left: 20vw;
-    margin-right: 20vw;
+
     text-align: center;
     align-items: center;
     gap: 20px;
+    padding-bottom: 20vh;
   }
 
   .filter-item {
-    height: 215px;
+    height: fit-content;
     gap: 30px;
-    width: max-content;
+    width: 225px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

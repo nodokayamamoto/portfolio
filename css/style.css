@@ -540,7 +540,7 @@ body {
 
 .works_wrap {
   height: 100vh;
-  width: fit-content;
+  width: max-content;
   margin-left: 20vw;
   display: flex;
   justify-content: flex-start;
@@ -559,7 +559,7 @@ body {
 
 .filter-item {
   height: 585px;
-  width: max-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

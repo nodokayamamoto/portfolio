@@ -297,7 +297,7 @@
   .prof02 {
     width: 75vw;
     position: absolute;
-    right: 0;
+    right: -20vw;
     top: -30px;
   }
 
@@ -337,6 +337,7 @@
     height: fit-content;
     width: 70vw;
     margin: 0 auto;
+    padding-top: 80px;
   }
 
   .bio {
@@ -347,7 +348,6 @@
   .bio_container {
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
   }
 
   .bio_container div {

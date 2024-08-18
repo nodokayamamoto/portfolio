@@ -36,12 +36,12 @@
         </ul>
     </nav>
 
-    <p class="back_btn back">
+    <p class="back_btn back scroll-out">
         <a href="javascript:void(0)" onclick="history.back()">back page</a>
     </p>
 
     <img src="./images/1x/light.png" class="light detail_light" alt="light">
-    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+    <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
 
     <main class="fadeUp">
         <section>
@@ -87,6 +87,15 @@
                 $('#sp_btn').toggleClass('open');
             })
         })
+    </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
     </script>
 </body>
 

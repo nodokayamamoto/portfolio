@@ -112,19 +112,17 @@
         </nav>
 
         <img src="./images/1x/light.png" class="light main_light" alt="light">
-        <p class="copy_write">©DecoRa design works all rights reserved.</p>
+        <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
 
         <main data-scroll-container>
             <section data-scroll-section class="scroll_section">
                 <div class="contents_box">
-                    <img src="./images/SVG/logo.svg" class="logo" alt="DecoRa design works logomark" data-scroll
-                        data-scroll-speed="1">
+                    <img src="./images/SVG/logo.svg" class="logo" alt="DecoRa design works logomark">
                     <div>
                         <h2>
-                            <img src="./images/SVG/head_decora.svg" class="decora shadow" alt="What is DecoRa?"
-                                data-scroll data-scroll-speed="-1">
+                            <img src="./images/SVG/head_decora.svg" class="decora shadow" alt="What is DecoRa?">
                         </h2>
-                        <p data-scroll data-scroll-speed="-2" class="concept_write">『DecoRa』には<br>
+                        <p class="concept_write">『DecoRa』には<br>
                             誰にでもあるでこぼこの「でこ」を愛したい、<br>
                             お客様の思いに彩りを加えて<br class="pc_hidden">「decoration」したいという、<br>
                             2つの思いを込めています。</p>
@@ -139,11 +137,10 @@
                     </h2>
                     <img src="./images/1x/prof01_pc-80.jpg" class="prof01" alt="プロフィール写真">
                     <div>
-                        <h2 data-scroll data-scroll-speed="1">
+                        <h2>
                             <img src="./images/SVG/head_policy.svg" class="policy shadow sp_hidden" alt="My policy">
                         </h2>
-                        <p data-scroll data-scroll-speed="2" class="policy_write">看護師として、<br
-                                class="pc_hidden">看護教員として、<br class="pc_hidden">そして母として、<br
+                        <p class="policy_write">看護師として、<br class="pc_hidden">看護教員として、<br class="pc_hidden">そして母として、<br
                                 class="pc_hidden">わたしが心がけていること。<br><br class="pc_hidden">
                             それは、<br class="pc_hidden">できないことではなく、<br class="pc_hidden">できることに目を向けること。<br><br
                                 class="pc_hidden">
@@ -153,7 +150,7 @@
                             事業やサービスの『強み』を引き出し、<br class="pc_hidden">より魅力的に伝えること。<br><br class="pc_hidden">
                             単なる「デザインをつくる人」ではなく、<br>
                             あなたや事業とともに走る<br class="pc_hidden">「パートナー」でありたいと思っています。</p>
-                        <p class="btn_arrow btn01" data-scroll data-scroll-speed="1">
+                        <p class="btn_arrow btn01">
                             <a href="about.html">山本和はどんな人？</a>
                         </p>
                     </div>
@@ -271,6 +268,15 @@
 
         });
 
+    </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
     </script>
 
     <script>

@@ -7,11 +7,18 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    overflow-x: hidden;
+  }
+
+  #header {
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   main {
+    padding-top: 20vh;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 25vh;
   }
 
   .pc_hidden {
@@ -133,6 +140,7 @@
     animation-name: fadeInAnime;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+    border: none;
     opacity: 0;
   }
 
@@ -188,6 +196,7 @@
     transform-origin: left top;
     white-space: nowrap;
     font-size: 9px;
+    opacity: 0.8;
   }
 
   /* main---------------------------------------------------------------------------- */
@@ -196,18 +205,18 @@
 
   .contents_box {
     flex-direction: column;
-    height: 80vh;
+    height: 60vh;
     width: 80vw;
     margin: 0 auto;
     gap: 40px;
-    padding-top: 10vh;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 10vh;
+    padding-bottom: 20vh;
   }
 
   .second_contents {
     height: fit-content;
+    padding-bottom: 0;
   }
 
   .contents_box div {
@@ -252,7 +261,7 @@
   .about_wrap {
     width: 80vw;
     height: fit-content;
-    margin: 100px auto;
+    margin: 0 auto;
   }
 
   .about_box {
@@ -413,7 +422,6 @@
 
   .skills_wrap p:last-child {
     padding-top: 40px;
-    margin-bottom: 160px;
   }
 
   /* works--------------------------------------------------------------------------- */
@@ -421,7 +429,6 @@
   .works_wrap {
     height: max-content;
     width: 225px;
-    padding-top: 100px;
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
@@ -443,11 +450,15 @@
     z-index: 3;
   }
 
+  .hidden {
+    transform: translate(80%, 0);
+  }
+
   .filter-list.sp_filter li {
     border: 1px solid #fff;
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.5);
     border-right: none;
-    line-height: 2.8;
+    line-height: 3;
     padding: 0 10px;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
@@ -464,11 +475,9 @@
 
   .margin {
     width: 250px;
-
     text-align: center;
     align-items: center;
     gap: 20px;
-    padding-bottom: 20vh;
   }
 
   .filter-item {
@@ -502,20 +511,24 @@
 
   /* works detail-------------------------------------------------------------------- */
 
+  .back {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .detail_container {
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: center;
     height: fit-content;
-    width: 80vw;
+    width: 70vw;
     gap: 80px;
-    margin: 150px auto 0 auto;
+    margin: 0 auto;
   }
 
   .vw {
     align-items: center;
-    width: 80vw;
-    margin: 150px auto;
+    width: 70vw;
+    margin: 0 auto;
   }
 
   .detail_img {
@@ -532,8 +545,8 @@
   }
 
   .detail_left div:first-child {
-    width: 20vw;
-    padding: 0 20px 0 0;
+    width: 15vw;
+    padding: 0 15px 0 0;
   }
 
   .flex {
@@ -545,7 +558,7 @@
   .detail_right {
     border-left: solid 1px #fff;
     width: 50vw;
-    padding-left: 20px;
+    padding-left: 15px;
     white-space: nowrap;
   }
 
@@ -572,7 +585,7 @@
 
   .detail_first,
   .detail_column {
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
   }
 
@@ -606,10 +619,6 @@
     object-fit: cover;
   }
 
-  .bottom {
-    padding-bottom: 300px;
-  }
-
   /* banner */
 
   .square {
@@ -621,9 +630,9 @@
   }
 
   .banner_container {
-    width: 80vw;
+    width: 70vw;
     height: fit-content;
-    margin: 150px auto;
+    margin: 0 auto;
     gap: 40px;
   }
 
@@ -643,12 +652,15 @@
 
   /* contact------------------------------------------------------------------------- */
 
+  #contact {
+    height: fit-content;
+  }
+
   .contact_container {
-    height: 100vh;
-    padding-top: 10vh;
+    height: fit-content;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0;
   }
 

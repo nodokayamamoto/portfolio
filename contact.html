@@ -37,7 +37,7 @@
     </nav>
 
     <img src="./images/1x/light.png" class="light contact_light" alt="light">
-    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+    <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
 
     <main class="fadeUp">
         <section id="contact">
@@ -83,6 +83,15 @@
                 $('#sp_btn').toggleClass('open');
             })
         })
+    </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
     </script>
 </body>
 

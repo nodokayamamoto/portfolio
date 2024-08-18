@@ -40,7 +40,7 @@
     </nav>
 
     <img src="./images/1x/light.png" class="light about_light" alt="light">
-    <p class="copy_write">©DecoRa design works all rights reserved.</p>
+    <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
 
     <main data-scroll-container class="fadeUp">
         <section data-scroll-section class="scroll_section">
@@ -297,25 +297,35 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
         // });
 
     </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
+    </script>
+
     <script>
 
-            (() => {
-                document.addEventListener('DOMContentLoaded', () => {
-                    new LocomotiveScroll({
-                        el: document.querySelector('[data-scroll-container]'),
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                    tablet: {
                         direction: 'horizontal',
                         smooth: true,
-                        tablet: {
-                            direction: 'horizontal',
-                            smooth: true,
-                        },
-                        smartphone: {
-                            direction: 'vertical',
-                            smooth: false,
-                        }
-                    })
+                    },
+                    smartphone: {
+                        direction: 'vertical',
+                        smooth: false,
+                    }
                 })
-            })()
+            })
+        })()
     </script>
 </body>
 

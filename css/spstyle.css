@@ -88,7 +88,7 @@
   }
 
   #sp_nav {
-    position: absolute;
+    position: fixed;
     z-index: 80;
     top: 0;
     left: 0;
@@ -263,6 +263,7 @@
     align-items: center;
     justify-content: center;
     gap: 60px;
+    position: relative;
   }
 
   .about_me {
@@ -272,13 +273,14 @@
     position: absolute;
     top: 12vh;
     left: 15vw;
+    z-index: 3;
   }
 
   .prof02 {
     width: 75vw;
     position: absolute;
-    right: -25px;
-    top: 0;
+    left: 80px;
+    top: -30px;
   }
 
   .about_detail {
@@ -305,7 +307,7 @@
     transform: rotate(-90deg);
     transform-origin: right top;
     position: absolute;
-    bottom: 0;
+    top: 500px;
     right: 25px;
   }
 
@@ -330,7 +332,7 @@
   }
 
   .bio_container div {
-    height: fit-content;
+    height: max-content;
     width: 80%;
     padding: 0 20% 50px 20%;
     border-left: 1px dashed #fff;
@@ -373,6 +375,7 @@
     height: fit-content;
     align-items: center;
     margin: 0 auto;
+    position: relative;
   }
 
   .skills_container {
@@ -442,6 +445,7 @@
 
   .filter-list.sp_filter li {
     border: 1px solid #fff;
+    background-color: #222;
     border-right: none;
     line-height: 2.8;
     padding: 0 10px;

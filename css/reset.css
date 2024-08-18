@@ -3,12 +3,12 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 body {
   position: relative;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 html,

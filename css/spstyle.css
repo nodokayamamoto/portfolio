@@ -290,14 +290,14 @@
     transform-origin: left bottom;
     position: absolute;
     top: 12vh;
-    left: 15vw;
+    left: 5vw;
     z-index: 3;
   }
 
   .prof02 {
     width: 75vw;
     position: absolute;
-    left: 80px;
+    right: 0;
     top: -30px;
   }
 
@@ -347,6 +347,7 @@
   .bio_container {
     display: flex;
     flex-direction: column;
+    padding-top: 80px;
   }
 
   .bio_container div {

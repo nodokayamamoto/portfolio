@@ -434,7 +434,7 @@
     transform: translate(-50%);
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 8px;
     white-space: nowrap;
     z-index: 3;
   }
@@ -639,12 +639,12 @@
   /* contact------------------------------------------------------------------------- */
 
   .contact_container {
-    height: 80vh;
-    margin-top: 30vh;
+    height: 100vh;
+    padding-top: 10vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0;
   }
 
   .contact_img {

@@ -434,7 +434,7 @@
     transform: translate(-50%);
     display: flex;
     justify-content: center;
-    gap: 3%;
+    gap: 5px;
     white-space: nowrap;
     z-index: 3;
   }

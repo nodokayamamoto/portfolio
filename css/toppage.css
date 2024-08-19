@@ -37,6 +37,7 @@
 #splash_logo svg {
   width: 336px;
   filter: drop-shadow(4px 4px 5px #000);
+  will-change: filter;
 }
 
 /*=============== SVGアニメーション内の指定 =================*/

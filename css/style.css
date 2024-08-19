@@ -31,6 +31,23 @@ body {
   }
 }
 
+.scroll-view {
+  animation: scrollAnime linear;
+  animation-duration: auto;
+  animation-timeline: scroll();
+  animation-range: contain;
+}
+
+@keyframes scrollAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* shadow */
 
 .shadow {
@@ -697,6 +714,72 @@ body {
 .works_img:hover::before,
 .works_img:hover::after {
   opacity: 1;
+}
+
+.scroll-arrow {
+  content: "";
+  width: 300px;
+  border-bottom: 1px solid #fff;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-arrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  top: -4px;
+  right: 1px;
+  transform: rotate(-45deg);
+}
+
+.scroll-arrow::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  bottom: 1px;
+  right: -4px;
+  transform: rotate(45deg);
+}
+
+.scroll-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: announce 1.5s linear infinite;
+}
+
+@keyframes announce {
+  0% {
+    left: 20px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    left: 200px;
+    opacity: 0;
+  }
+  100% {
+    left: 300px;
+    opacity: 0;
+  }
 }
 
 /* works detail-------------------------------------------------------------------- */

@@ -131,6 +131,26 @@
     font-style: normal;
     font-size: 28px;
     letter-spacing: 0.1em;
+    opacity: 0;
+    transform: translateX(10%);
+    transition: all 1s;
+  }
+
+  #sp_nav.open ul li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #sp_nav.open ul li:first-child {
+    transition-delay: 0.5s;
+  }
+
+  #sp_nav.open ul li:nth-child(2) {
+    transition-delay: 0.7s;
+  }
+
+  #sp_nav.open ul li:last-child {
+    transition-delay: 0.9s;
   }
 
   #sp_nav a {
@@ -518,6 +538,81 @@
   .works_img {
     width: 225px;
     height: 150px;
+  }
+
+  .scroll-arrow {
+    content: "";
+    width: 0px;
+    height: 120px;
+    border-bottom: 0;
+    border-left: 1px solid #fff;
+    box-sizing: border-box;
+    position: fixed;
+    top: 20vh;
+    left: auto;
+    right: 5vw;
+    transform: translateX(0);
+  }
+
+  .scroll-arrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    top: auto;
+    bottom: 1px;
+    right: auto;
+    left: -5px;
+    transform: rotate(-45deg);
+  }
+
+  .scroll-arrow::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    bottom: 1px;
+    right: -4px;
+    transform: rotate(45deg);
+  }
+
+  .scroll-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: announce 1.5s linear infinite;
+  }
+
+  @keyframes announce {
+    0% {
+      left: auto;
+      top: 20px;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    70% {
+      left: auto;
+      top: 80px;
+      opacity: 0;
+    }
+    100% {
+      left: auto;
+      top: 120px;
+      opacity: 0;
+    }
   }
 
   /* works detail-------------------------------------------------------------------- */

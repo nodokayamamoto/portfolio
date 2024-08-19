@@ -769,6 +769,7 @@
   }
 
   .contact_container {
+    padding-top: 0;
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -791,5 +792,44 @@
 
   button {
     transform: translateX(0);
+  }
+
+  .sns_link {
+    width: 80vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sns_link::before {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    bottom: -20px;
+  }
+
+  .sns_link:hover::before {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    bottom: -20px;
+  }
+
+  .insta {
+    width: 32px;
+  }
+
+  /* thanks---------------------------------------------------------------------------------- */
+
+  .thanks_img {
+    width: 551px;
+  }
+
+  #thanks {
+    height: fit-content;
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
   }
 }

@@ -57,7 +57,7 @@
                 </div>
                 <form class="c-form"
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfFInNtvZiOskbHzsPLZ-6nUj_sf3eprCVvAoxsXd2HJNhFkQ/formResponse"
-                    method="POST">
+                    method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                     <div class="c-form_item">
                         <input name="272494365" class="c-form__input" id="field-name" placeholder="お名前" type="text"
                             required="required" />
@@ -75,6 +75,13 @@
                     </div>
                 </form>
             </div>
+
+            <a href="https://www.instagram.com/decora_dw/" target="_blank">
+                <div class="sns_link">
+                    <p>instagramからもDMを受けつけております。</p>
+                    <img src="./images/SVG/insta_icon.svg" class="insta" alt="instagram icon">
+                </div>
+            </a>
         </section>
     </main>
 
@@ -95,6 +102,12 @@
             });
         });
     </script>
+
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='thanks.html';}"></iframe>
 </body>
 
 </html>

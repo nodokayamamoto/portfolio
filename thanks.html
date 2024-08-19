@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav>
+        <ul id="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
+    <img src="./images/1x/light.png" class="light thanks_light" alt="light">
+    <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
+
+    <div class="bg-img pc_hidden"></div>
+
+    <main class="fadeUp">
+        <section id="thanks">
+            <h2>
+                <img src="./images/SVG/thanks_img.svg" class="thanks_img shadow" alt="Work with me!">
+            </h2>
+
+            <p>3日以内にお返事いたします。</p>
+
+        </section>
+    </main>
+
+    <script>
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle().toggleClass('open');
+                $('#sp_btn').toggleClass('open');
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
+    </script>
+</body>
+
+</html>

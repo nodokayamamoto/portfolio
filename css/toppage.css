@@ -211,12 +211,12 @@ body.appear #main_container {
   }
 
   .glowAnime {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 10vh;
   }
 
   .skip {
-    right: 50%;
-    transform: translate(50%);
+    right: 0;
+    transform: translate(0);
   }
 }

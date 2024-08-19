@@ -208,10 +208,12 @@
   /* copy write */
 
   .copy_write {
-    left: 5px;
-    bottom: 2px;
-    transform: rotate(-90deg);
-    transform-origin: left top;
+    position: absolute;
+    top: auto;
+    right: auto;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%);
     white-space: nowrap;
     font-size: 9px;
     opacity: 0.8;
@@ -481,7 +483,7 @@
   .filter-list.sp_filter {
     position: fixed;
     right: 0;
-    bottom: 30px;
+    bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -495,6 +497,7 @@
   }
 
   .filter-list.sp_filter li {
+    width: 125px;
     border: 1px solid #fff;
     background-color: rgba(0, 0, 0, 0.5);
     border-right: none;
@@ -503,7 +506,14 @@
     font-weight: 600;
     padding: 0 10px;
     box-sizing: border-box;
+    transform: translateX(20px);
     transition: all 0.3s ease-in-out;
+  }
+
+  .sp_filter li:hover {
+    transform: translateX(0);
+    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3),
+      0 0 0.8em rgba(255, 255, 255, 0.3);
   }
 
   .works_head {
@@ -611,7 +621,8 @@
   /* works detail-------------------------------------------------------------------- */
 
   .back {
-    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    transform: translate(0);
   }
 
   .detail_container {

@@ -128,23 +128,28 @@ li:active {
 
 .back_btn a {
   display: block;
-  width: 120px;
+  width: 60px;
   padding: 10px 10px 10px 35px;
   font-size: 13px;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
+  transition: all 1s;
+}
+
+.back_btn a:hover {
+  border: 1px solid #fff;
 }
 
 .back_btn a::after,
 .back_btn a::before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 23px;
   bottom: 0;
-  left: 40px;
+  left: 35px;
   width: 14px;
   height: 14px;
   margin: auto;
@@ -155,6 +160,7 @@ li:active {
 
 .back_btn:hover a::after {
   transform: translate(-115%, -50%) rotate(45deg);
+  opacity: 1;
 }
 
 .back_btn:hover a::before {
@@ -163,6 +169,7 @@ li:active {
 
 .back_btn a::after {
   transform: translate(-100%, -25%) rotate(0deg);
+  opacity: 0;
 }
 
 .back_btn a::before {
@@ -170,8 +177,7 @@ li:active {
 }
 
 .btn_arrow a:hover,
-.back_btn a:hover,
-.sp_filter li:hover {
+.back_btn a:hover {
   box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3),
     0 0 0.8em rgba(255, 255, 255, 0.3);
 }
@@ -195,5 +201,12 @@ li:active {
 
   p {
     font-size: 13px;
+  }
+
+  .back_btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    border-right: none;
+    padding: 0;
   }
 }

@@ -73,12 +73,12 @@
         <section data-scroll-section class="scroll_section">
             <div class="works_wrap">
                 <h2>
-                    <img src="./images/SVG/head_works.svg" class="works_head shadow" alt="What i've done">
+                    <img src="./images/SVG/head_works.svg" class="works_head shadow view" alt="What i've done">
                 </h2>
                 <ul class="filter-item">
                     <li data-item="web,graphic">
                         <a href=" works01.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <div class="wimg src1"></div>
                                     <div class="wimg src2"></div>
@@ -91,7 +91,7 @@
                     </li>
                     <li data-item="web">
                         <a href="works02.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/works02.png" alt="works02">
                                 </div>
@@ -102,7 +102,7 @@
                     </li>
                     <li data-item="web">
                         <a href="works03.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/works03.png" alt="works03">
                                 </div>
@@ -113,7 +113,7 @@
                     </li>
                     <li data-item="graphic">
                         <a href="graphic02.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/graphic02.png" alt="works03">
                                 </div>
@@ -124,7 +124,7 @@
                     </li>
                     <li data-item="graphic">
                         <a href="graphic04.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/graphic04.png" alt="works03">
                                 </div>
@@ -135,7 +135,7 @@
                     </li>
                     <li data-item="banner">
                         <a href="banner01.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/banner01.png" alt="banner01">
                                 </div>
@@ -146,7 +146,7 @@
                     </li>
                     <li data-item="banner">
                         <a href="banner02.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/banner02.png" alt="banner02">
                                 </div>
@@ -157,7 +157,7 @@
                     </li>
                     <li data-item="banner">
                         <a href="banner03.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/banner03.png" alt="banner03">
                                 </div>
@@ -168,7 +168,7 @@
                     </li>
                     <li data-item="banner">
                         <a href="banner04.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/banner04.png" alt="banner04">
                                 </div>
@@ -179,7 +179,7 @@
                     </li>
                     <li data-item="banner">
                         <a href="banner05.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/banner05.png" alt="banner05">
                                 </div>
@@ -190,7 +190,7 @@
                     </li>
                     <li data-item="banner">
                         <a href="banner06.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/banner06.png" alt="banner06">
                                 </div>
@@ -201,7 +201,7 @@
                     </li>
                     <li data-item="web">
                         <a href="works04.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/works04.png" alt="works04">
                                 </div>
@@ -212,7 +212,7 @@
                     </li>
                     <li data-item="web">
                         <a href="works05.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/works05.png" alt="works05">
                                 </div>
@@ -223,7 +223,7 @@
                     </li>
                     <li data-item="web">
                         <a href="works06.html">
-                            <div>
+                            <div class="view">
                                 <div class="works_img">
                                     <img src="./images/1x/works06.png" alt="works06">
                                 </div>
@@ -236,7 +236,7 @@
             </div>
         </section>
         <section data-scroll-section class="scroll_section">
-            <div class="works_wrap margin">
+            <div class="works_wrap view margin">
                 <h2></h2>
                 <p>このほかにも実績多数ございます。<br>
                     詳しくはお問い合わせください。</p>
@@ -333,6 +333,24 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 $(".scroll-out").stop();
                 $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
             });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+
+    <script>
+        inView('.view')
+            .on('enter', el => {
+                //ビューインしたら実行
+                el.style.opacity = 1;
+            })
+            .on('exit', el => {
+                //ビューアウトしたら実行
+                el.style.opacity = 0;
+            });
+        inView.offset({
+            top: 100,
+            left: 100,
         });
     </script>
 </body>

@@ -333,10 +333,10 @@
 
   .scroll {
     width: 190px;
-    transform-origin: right top;
+    transform-origin: left bottom;
     position: absolute;
-    top: 700px;
-    right: 30px;
+    top: 850px;
+    left: 30px;
     animation: textannounce 3s linear infinite;
   }
 
@@ -503,7 +503,7 @@
     border-right: none;
     line-height: 3;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0 10px;
     box-sizing: border-box;
     transform: translateX(20px);
@@ -568,10 +568,9 @@
     border-left: 1px solid #fff;
     box-sizing: border-box;
     position: fixed;
-    top: 25vh;
-    left: auto;
-    right: 5vw;
-    transform: translateX(0);
+    top: 50%;
+    left: 30px;
+    transform: translateX(0) translateY(-50%);
   }
 
   .scroll-arrow::before {
@@ -592,7 +591,7 @@
     background: #fff;
     border-radius: 50%;
     opacity: 0;
-    animation: announce 1.5s linear infinite;
+    animation: announce 2s linear infinite;
   }
 
   @keyframes announce {
@@ -622,6 +621,7 @@
   /* works detail-------------------------------------------------------------------- */
 
   .back {
+    font-weight: 500;
     right: 0;
     transform: translate(0);
   }
@@ -634,6 +634,7 @@
     width: 80vw;
     gap: 80px;
     margin: 0 auto;
+    padding-top: 70px;
   }
 
   .vw {
@@ -746,6 +747,7 @@
     height: fit-content;
     margin: 0 auto;
     gap: 40px;
+    padding-top: 30px;
   }
 
   .banner_flex:nth-child(2) {
@@ -755,7 +757,7 @@
   .banner_flex {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
   }
 
   .banner_container p span {
@@ -823,9 +825,9 @@
   }
 
   #thanks {
-    height: fit-content;
+    height: 100vh;
     width: 80vw;
-    margin: 50px auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

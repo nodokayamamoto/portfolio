@@ -43,7 +43,7 @@
     <img src="./images/1x/light.png" class="light main_light" alt="light">
     <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
 
-    <div class="bg-img pc_hidden"></div>
+    <div class="bg-img"></div>
 
     <main data-scroll-container class="fadeUp">
         <section data-scroll-section class="scroll_section">
@@ -136,12 +136,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
-                    tablet: {
-                        direction: 'horizontal',
-                        smooth: true,
-                    },
-                    smartphone: {
-                        direction: 'vertical',
+                    tablet, smartphone: {
                         smooth: false,
                     }
                 })

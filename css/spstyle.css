@@ -33,17 +33,7 @@
   }
 
   .bg-img {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/2x/back_sp@2x-80.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
+    background-image: url("../images/2x/back_sp@2x-80.jpg");
   }
 
   /* hamburger menu */

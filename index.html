@@ -84,7 +84,7 @@
         </p>
     </div>
 
-    <div class="bg-img pc_hidden"></div>
+    <div class="bg-img"></div>
 
     <div class="splashbg"></div>
 
@@ -290,12 +290,7 @@
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
-                    tablet: {
-                        direction: 'horizontal',
-                        smooth: true,
-                    },
-                    smartphone: {
-                        direction: 'vertical',
+                    tablet, smartphone: {
                         smooth: false,
                     }
                 })

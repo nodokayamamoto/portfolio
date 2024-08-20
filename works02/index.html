@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIFE hair design</title>
+    <link rel="icon" href="./images/works02_favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
@@ -82,13 +83,13 @@
         <div class="concept_top view">
             <div class="concept_copy">
                 <p>Lifestyle Fit</p>
-                <img src="./images/SVG/concept.svg" alt="Lifestyle Fit" class="concept_write parallax-item4">
+                <img src="./images/SVG/concept.svg" alt="Lifestyle Fit" class="concept_write">
             </div>
             <div class="concept_mainimage">
                 <h2>Concept</h2>
                 <picture class="concept1">
                     <source srcset="images/2x/concept_SP1@2x-80.jpg" media="(max-width:767px)">
-                    <img src="./images/1x/concept_PC1-80.jpg" alt="空を見上げるセミロングの女性" class="parallax-item3">
+                    <img src="./images/1x/concept_PC1-80.jpg" alt="空を見上げるセミロングの女性">
                 </picture>
             </div>
         </div>
@@ -108,12 +109,12 @@
                     体感してみてください。
                 </p>
                 <img src="./images/1x/concept_PC2-80.jpg" alt="ボブヘアをカットする美容師の手元"
-                    class="concept2 sp_hidden parallax-item1">
+                    class="concept2 sp_hidden parallax-item4">
             </div>
             <div class="second_image">
                 <picture class="concept3">
                     <source srcset="images/2x/concept_SP@2x-80.jpg" media="(max-width:767px)">
-                    <img src="./images/1x/concept_PC3-80.jpg" alt="背中合わせに立つショートヘアとパーマスタイルの女性たち" class="parallax-item2">
+                    <img src="./images/1x/concept_PC3-80.jpg" alt="背中合わせに立つショートヘアとパーマスタイルの女性たち" class="parallax-item3">
                 </picture>
                 <picture class="concept4">
                     <source srcset="images/2x/concept_SP4@2x-80.jpg" media="(max-width:767px)">
@@ -299,7 +300,7 @@
             <h2>Salon Info</h2>
             <picture class="infotop_image">
                 <source srcset="images/2x/infotop_SP1@2x-80.jpg" media="(max-width:767px)">
-                <img src="./images/1x/infotop_PC1-80.jpg" alt="ヘアカット中の美容師" class="infotop1 parallax-item5">
+                <img src="./images/1x/infotop_PC1-80.jpg" alt="ヘアカット中の美容師" class="infotop1 parallax-item3">
             </picture>
             <picture class="infotop_image">
                 <source srcset="images/2x/infotop_SP2@2x-80.jpg" media="(max-width:767px)">
@@ -507,6 +508,20 @@
         </button>
     </div>
 
+    <div class="parallax-item4 parallax-hexagon hexagon1"></div>
+    <div class="parallax-item4 parallax-hexagon hexagon2"></div>
+    <div class="parallax-item4 parallax-hexagon hexagon3"></div>
+    <div class="parallax-item4 parallax-hexagon hexagon4"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon1"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon2"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon3"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon4"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon5"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon6"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon7"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon8"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon9"></div>
+    <div class="parallax-item1 parallax-hexagon small-hexagon10"></div>
     <script>
         $(function () {
             $('.sp_btn').on('click', function () {
@@ -549,11 +564,11 @@
             var scrollPosition = $(this).scrollTop();
 
             // パララックスを適用したい要素の動きを設定
-            $('.parallax-item1').css('transform', 'translateY(' + scrollPosition * -0.5 + 'px)');
-            $('.parallax-item2').css('transform', 'translateY(' + scrollPosition * -0.3 + 'px)');
-            $('.parallax-item3').css('transform', 'translateY(' + scrollPosition * 0.1 + 'px)');
-            $('.parallax-item4').css('transform', 'translateY(' + scrollPosition * -0.1 + 'px)');
-            $('.parallax-item5').css('transform', 'translateY(' + scrollPosition * -0.2 + 'px)');
+            $('.parallax-item1').css('transform', 'translateY(' + scrollPosition * -0.7 + 'px)');
+            $('.parallax-item2').css('transform', 'translateY(' + scrollPosition * -0.4 + 'px)');
+            $('.parallax-item3').css('transform', 'translateY(' + scrollPosition * -0.3 + 'px)');
+            $('.parallax-item4').css('transform', 'translateY(' + scrollPosition * -0.2 + 'px)');
+            $('.parallax-item5').css('transform', 'translateY(' + scrollPosition * -0.1 + 'px)');
         });
 
         $(function () {

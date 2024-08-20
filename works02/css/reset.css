@@ -3,12 +3,10 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   position: relative;
-  overflow-x: hidden;
 }
 
 html,
@@ -73,6 +71,10 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+  }
+
   h2 {
     font-size: 32px;
   }

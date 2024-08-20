@@ -136,7 +136,12 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
-                    tablet, smartphone: {
+                    tablet: {
+                        direction: 'horizontal',
+                        smooth: true,
+                    },
+                    smartphone: {
+                        direction: 'vertical',
                         smooth: false,
                     }
                 })

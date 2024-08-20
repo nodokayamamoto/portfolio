@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKERS</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header_top">
+            <h2 class="menu_logo">
+                <a href="#header"><img src="./images/SVG/menu_logo.svg" alt="WORKERS"
+                        style="width:163px;height:auto;"></a>
+            </h2>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">WORKERSについて</a></li>
+                    <li><a href="#plan">料金プラン</a></li>
+                    <li><a href="#tenpo">店舗一覧</a></li>
+                    <li><a href="#faq">よくある質問</a></li>
+                    <li><button class="visit" onclick="location.href=''">無料見学予約</button></li>
+                </ul>
+            </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#header">TOPにもどる</a></li>
+                    <li><a href="#about">WORKERSについて</a></li>
+                    <li><a href="#plan">料金プラン</a></li>
+                    <li><a href="#tenpo">店舗一覧</a></li>
+                    <li><a href="#faq">よくある質問</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title">
+            <p>会員制コワーキングスペース</p>
+
+            <div class="logosvg_container">
+                <h1><img src="./images/SVG/logo.svg" alt="WORKERS"></h1>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <div class="about_top">
+                <h2>仕事がもっと<br>
+                    楽しくなる</h2>
+                <p>いつも働いている職場から少し飛び出してみると、<br>
+                    違った景色が見えてきます。<br>
+                    みなさんの「仕事がもっと楽しくなる」。<br>
+                    私たちWORKERSはそんな場を提供します。</p>
+                <div class="worksvg_container">
+                    <img src="./images/SVG/work.svg" alt="パソコンで仕事をする人">
+                </div>
+                <div class="spworksvg_container">
+                    <img src="./images/SVG/work_SP.svg" alt="パソコンで仕事をする人">
+                </div>
+            </div>
+            <button class="sp_visit" onclick="location.href=''">無料見学予約</button>
+            <div class="detail">
+                <div class="detail_flex">
+                    <div class="detail_contents">
+                        <div class="detail_icon carender">
+                            <img src="./images/SVG/calendar.svg" alt="カレンダーマーク">
+                        </div>
+                        <p><span>２４時間利用可能</span></p>
+                        <p>会員のみなさまにお渡しするカードキーで２４時間いつでもご利用いただけます。日中はもちろん仕事前の朝活など、ライフスタイルに合わせてご利用いただけます。</p>
+                    </div>
+                    <div class="detail_contents">
+                        <div class="detail_icon coin">
+                            <img src="./images/SVG/coin.svg" alt="円マーク">
+                        </div>
+                        <p><span>初期費用０円</span></p>
+                        <p>入会金がかかるコワーキングスペースが多いですが、WORKERSは初期費用がかかりません。初期費用がかからないので費用をおさえられます。</p>
+                    </div>
+                    <div class="detail_contents">
+                        <div class="detail_icon map">
+                            <img src="./images/SVG/map.svg" alt="地図マーク">
+                        </div>
+                        <p><span>エリアが充実</span></p>
+                        <p>全国各地に５２店舗展開しております。職場の近くや自宅の近く、お好きな場所でご利用いただけます。また出張先などの県外でもご利用いただけます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="plan">
+            <div class="plan_top">
+                <div class="plansvg_container">
+                    <h2><img src="./images/SVG/price.svg" alt="PRICE"></h2>
+                </div>
+                <p>料金プラン</p>
+            </div>
+            <div class="plan_flex">
+                <div class="plan_contents">
+                    <div class="plan_name">
+                        <p>ライトプラン</p>
+                    </div>
+                    <div class="price">
+                        <p>月額</p>
+                        <p>¥10,000<span>(税込)</span></p>
+                    </div>
+                    <div class="sp_line"></div>
+                    <ul class="plan_detail">
+                        <li>ご指定いただいた店舗のみご利用いただけます。</li>
+                        <li>会議室を有料でご利用いただけます。</li>
+                        <li>月1の会員交流会に有料でご参加いただけます。</li>
+                    </ul>
+                </div>
+                <div class="plan_contents">
+                    <div class="plan_name">
+                        <p>ベーシックプラン</p>
+                    </div>
+                    <div class="price">
+                        <p>月額</p>
+                        <p>¥20,000<span>(税込)</span></p>
+                    </div>
+                    <div class="sp_line"></div>
+                    <ul class="plan_detail">
+                        <li>全国52店舗どこでもご利用いただけます。</li>
+                        <li>会議室を無料でご利用いただけます。</li>
+                        <li>月1の会員交流会に無料でご参加いただけます。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="service">
+            <div class="service_top">
+                <div class="servicesvg_container">
+                    <h2><img src="./images/SVG/service.svg" alt="SERVICE"></h2>
+                </div>
+                <p>各種サービス</p>
+            </div>
+            <div class="service_container">
+                <div class="service_box">
+                    <div class="wifisvg_container svg"><img src="./images/SVG/wifi.svg" alt="wi-fi"></div>
+                    <p>インターネット</p>
+                    <p>全席無線高速インターネットが完備されています。</p>
+                </div>
+                <div class="service_box">
+                    <div class="socketsvg_container svg"><img src="./images/SVG/socket.svg" alt="コンセント"></div>
+                    <p>コンセント</p>
+                    <p>全席コンセントが完備されています。</p>
+                </div>
+                <div class="service_box">
+                    <div class="printersvg_container svg"><img src="./images/SVG/printer.svg" alt="プリンター"></div>
+                    <p>プリンター</p>
+                    <p>有料でプリンターをご利用いただけます。</p>
+                </div>
+                <div class="service_box">
+                    <div class="cupsvg_container svg"><img src="./images/SVG/cup.svg" alt="飲み物"></div>
+                    <p>フリードリンク</p>
+                    <p>無料でドリンクをお飲みいただけます。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li>会社概要</li>
+                <li>プライバシーポリシー</li>
+                <li>利用規約</li>
+                <li>入会申込</li>
+                <li>料金プラン</li>
+                <li>店舗一覧</li>
+                <li>よくある質問</li>
+                <li>お問い合わせ</li>
+            </ul>
+            <ul class="sns">
+                <li>
+                    <div class="snssvg_container"><img src="./images/SVG/instagram.svg" alt="instagram"></div>
+                </li>
+                <li>
+                    <div class="snssvg_container"><img src="./images/SVG/facebook.svg" alt="facebook"></div>
+                </li>
+                <li>
+                    <div class="snssvg_container"><img src="./images/SVG/youtube.svg" alt="YouTube"></div>
+                </li>
+            </ul>
+            <p>© 2022 WORKERS inc.</p>
+        </div>
+    </footer>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            })
+        })
+    </script>
+</body>
+
+</html>

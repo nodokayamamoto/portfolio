@@ -698,6 +698,13 @@
     margin-right: auto;
   }
 
+  .detail_textonly {
+    height: fit-content;
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
   .visit {
     padding-top: 3vh;
     transform: translateX(0);

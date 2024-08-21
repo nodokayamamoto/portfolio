@@ -216,6 +216,10 @@ body.appear #main_container {
     margin-bottom: 10vh;
   }
 
+  .logo_top {
+    width: 40vw;
+  }
+
   .glowAnime {
     font-size: 12px;
     margin-bottom: 10vh;

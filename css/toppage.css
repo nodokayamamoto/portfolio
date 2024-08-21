@@ -76,7 +76,7 @@
 }
 
 .logo_top {
-  width: 278px;
+  width: 12vw;
 }
 
 @keyframes fadeInAnime {
@@ -214,10 +214,6 @@ body.appear #main_container {
   #splash_logo svg {
     width: 268px;
     margin-bottom: 10vh;
-  }
-
-  .logo_top {
-    width: 226px;
   }
 
   .glowAnime {

@@ -777,7 +777,7 @@ iframe {
 }
 
 .hexagon1 {
-  top: 1400px;
+  top: 1200px;
   left: 10%;
   width: 320px;
   height: 280px;
@@ -997,6 +997,14 @@ iframe {
     z-index: 2;
   }
 
+  .infotop1 {
+    top: 1400px;
+  }
+
+  .infotop2 {
+    top: 650px;
+  }
+
   .info_hexagon {
     width: 400px;
     position: absolute;
@@ -1034,6 +1042,24 @@ iframe {
     right: -25%;
     z-index: 1;
   }
+
+  .hexagon1 {
+    top: 1000px;
+  }
+
+  .concept2 {
+    top: 700px;
+  }
+
+  .concept3 img {
+    top: 1000px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .concept4 img {
+    top: 600px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -1060,6 +1086,24 @@ iframe {
   .header_phone p {
     color: #fff;
     font-size: 13px;
+  }
+
+  .hexagon1 {
+    top: 700px;
+  }
+
+  .concept2 {
+    top: 600px;
+  }
+
+  .concept3 img {
+    top: 900px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .concept4 img {
+    top: 500px;
   }
 }
 

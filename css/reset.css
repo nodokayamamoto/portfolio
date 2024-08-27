@@ -183,7 +183,7 @@ button:hover {
     0 0 0.8em rgba(255, 255, 255, 0.3);
 }
 
-@media screen and (max-width: 1125px) {
+@media screen and (max-width: 1025px) {
   .back_btn {
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #fff;

@@ -924,6 +924,7 @@ hr {
   align-items: flex-start;
   text-align: center;
   gap: 80px;
+  box-sizing: border-box;
 }
 
 .contact_container div {

@@ -223,6 +223,10 @@ body:before {
   width: 100vw;
 }
 
+.contents_box.second_contents {
+  margin-right: 20vw;
+}
+
 .concept_write {
   font-size: 18px;
   padding-top: 20px;

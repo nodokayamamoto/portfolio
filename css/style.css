@@ -273,7 +273,7 @@ body:before {
 }
 
 .about_box {
-  height: 550px;
+  height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,7 +363,7 @@ body:before {
 }
 
 .bio_container div {
-  height: 450px;
+  height: 420px;
   width: 250px;
   padding: 0 60px 0 20px;
   border-right: 1px dashed #fff;

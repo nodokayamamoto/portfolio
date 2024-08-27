@@ -262,9 +262,10 @@ body:before {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  width: 60vw;
+  width: 1002px;
   align-items: flex-end;
-  padding: 0 10vw;
+  padding-right: 10vw;
+  padding-left: 10vw;
 }
 
 .about_box {
@@ -1007,4 +1008,24 @@ button {
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+
+@media screen and (max-width: 1025px) {
+  .concept_write {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .decora {
+    width: 360px;
+  }
+
+  .back {
+    font-weight: 500;
+    right: 0;
+    transform: translate(0);
+  }
 }

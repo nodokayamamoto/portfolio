@@ -623,12 +623,6 @@
 
   /* works detail-------------------------------------------------------------------- */
 
-  .back {
-    font-weight: 500;
-    right: 0;
-    transform: translate(0);
-  }
-
   .detail_container {
     flex-direction: column-reverse;
     align-items: flex-start;

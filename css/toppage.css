@@ -206,7 +206,7 @@ body.appear #main_container {
   right: 10%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 835px) {
   #splash_logo {
     background-image: url("../images/2x/back_sp@2x-80.jpg");
   }

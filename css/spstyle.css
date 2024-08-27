@@ -476,6 +476,42 @@
     padding-top: 40px;
   }
 
+  .modal_window {
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .modal_contents {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .img_height {
+    height: 200px;
+  }
+
+  .img_width {
+    width: 200px;
+  }
+
+  .dli-caret-right {
+    transform: rotate(90deg);
+  }
+
+  .modal_close {
+    top: auto;
+    bottom: 2vh;
+    right: 50%;
+    z-index: 12;
+    transform: translateY(0) translateX(50%) rotate(0);
+  }
+
   /* works--------------------------------------------------------------------------- */
 
   .works_wrap {

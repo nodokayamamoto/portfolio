@@ -139,9 +139,9 @@
                     <div class="skills_box">
                         <p>design</p>
                         <ul>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe Illustrator</li>
-                            <li>Figma</li>
+                            <li class="modal_open" data-id="1">Adobe Photoshop</li>
+                            <li class="modal_open" data-id="2">Adobe Illustrator</li>
+                            <li class="modal_open" data-id="3">Figma</li>
                             <li>Canva</li>
                         </ul>
                     </div>
@@ -171,6 +171,104 @@
         </section>
     </main>
 
+    <div class="modal_window" data-id="modal1">
+        <div class="modal_contents">
+            <img src="./images/skills/ps01_before.jpg" class="img_height" alt="使用素材">
+            <span class="dli-caret-right"></span>
+            <img src="./images/skills/ps01.jpg" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps02.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps03_before.jpg" class="img_height" alt="使用素材">
+            <span class="dli-caret-right"></span>
+            <img src="./images/skills/ps03.jpg" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps04.jpg" class="img_height" alt="Photoshop作品">
+            <img src="./images/skills/ps05.jpg" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps06_before.jpg" class="img_width" alt="使用素材">
+            <span class="dli-caret-right"></span>
+            <img src="./images/skills/ps06.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps07_before.png" class="img_height" alt="使用素材">
+            <span class="dli-caret-right"></span>
+            <img src="./images/skills/ps07.jpg" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps08.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps09_before.jpg" class="img_height" alt="使用素材">
+            <span class="dli-caret-right"></span>
+            <img src="./images/skills/ps09.jpg" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps10_before.png" class="img_height" alt="使用素材">
+            <span class="dli-caret-right"></span>
+            <img src="./images/skills/ps10.jpg" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ps11.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+    </div>
+
+    <div class="modal_window" data-id="modal2">
+        <div class="modal_contents">
+            <img src="./images/skills/ai02.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ai01.jpg" class="img_height" alt="Photoshop作品">
+            <img src="./images/skills/ai03.jpg" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ai04.jpg" class="img_width" alt="Photoshop作品">
+            <img src="./images/skills/ai05.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ai06.jpg" class="img_height" alt="Photoshop作品">
+            <img src="./images/skills/ai07.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ai08.jpg" class="img_width" alt="Photoshop作品">
+            <img src="./images/skills/ai09.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/ai10.jpg" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <p>写真の切り抜きや加工にはAdobe Photoshopを使用しています。</p>
+        </div>
+    </div>
+
+    <div class="modal_window" data-id="modal3">
+        <div class="modal_contents">
+            <img src="./images/skills/figma01.png" class="img_height" alt="Photoshop作品">
+            <img src="./images/skills/figma03.png" class="img_width" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/figma02.png" class="img_width" alt="Photoshop作品">
+            <img src="./images/skills/figma02_2.png" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/figma04_1.png" class="img_height" alt="Photoshop作品">
+            <img src="./images/skills/figma04_2.png" class="img_height" alt="Photoshop作品">
+        </div>
+        <div class="modal_contents">
+            <img src="./images/skills/figma04_3.png" class="img_height" alt="Photoshop作品">
+            <img src="./images/skills/figma04_4.png" class="img_height" alt="Photoshop作品">
+        </div>
+    </div>
+
+    <div class="modal_close">
+        <p>close</p>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
     <script src="
 https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
 "></script>
@@ -183,6 +281,17 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             })
         })
 
+        $(function () {
+            $('.modal_open').click(function () {
+                $("body").addClass("no_scroll");
+                var id = $(this).data('id');
+                $('#overlay,.modal_close, .modal_window[data-id="modal' + id + '"]').fadeIn();
+            });
+            $('#overlay,.modal_close').click(function () {
+                $("body").removeClass("no_scroll");
+                $('#overlay, .modal_close,.modal_window').fadeOut();
+            });
+        });
     </script>
 
     <script>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav>
+        <ul id="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
+    <nav class="sp_hidden">
+        <ul class="filter-list pc_filter">
+            <li><a href="">category</a></li>
+            <ul class="popup">
+                <li data-filter="all" class="is-active">All</li>
+                <li data-filter="web">WEB site</li>
+                <li data-filter="banner">Banner</li>
+                <li data-filter="graphic">Graphic</li>
+            </ul>
+        </ul>
+    </nav>
+
+    <nav class="pc_hidden">
+        <ul class="filter-list sp_filter scroll-out">
+            <li data-filter="all" class="is-active">All</li>
+            <li data-filter="web">WEB site</li>
+            <li data-filter="banner">Banner</li>
+            <li data-filter="graphic">Graphic</li>
+        </ul>
+    </nav>
+
+    <img src="./images/1x/light.png" class="light works_light" alt="light">
+    <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
+
+    <div class="scroll-arrow">
+        <div class="scroll-dot"></div>
+    </div>
+
+    <main data-scroll-container class="fadeUp">
+        <section data-scroll-section class="scroll_section">
+            <div class="works_wrap">
+                <h2>
+                    <img src="./images/SVG/head_works.svg" class="works_head shadow view" alt="What i've done">
+                </h2>
+                <ul class="filter-item">
+                    <li data-item="web,graphic">
+                        <a href=" works01.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <div class="wimg src1"></div>
+                                    <div class="wimg src2"></div>
+                                    <div class="wimg src3"></div>
+                                </div>
+                                <p><span>むぎゅハウス様</span></p>
+                                <p>WEBsite | Pumphlet | Flyer</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="web">
+                        <a href="works02.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/works02.png" alt="works02">
+                                </div>
+                                <p><span>LIFE hair design様（架空）</span></p>
+                                <p>WEBsite</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="web">
+                        <a href="works07.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/works07.png" alt="works07">
+                                </div>
+                                <p><span>portfolio</span></p>
+                                <p>WEBsite</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="web">
+                        <a href="works03.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/works03.png" alt="works03">
+                                </div>
+                                <p><span>SOZOの学校様</span></p>
+                                <p>WEBsite</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="graphic">
+                        <a href="graphic02.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/graphic02.png" alt="works03">
+                                </div>
+                                <p><span>一般社団法人デイジー様</span></p>
+                                <p>Pumphlet</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="graphic">
+                        <a href="graphic04.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/graphic04.png" alt="works03">
+                                </div>
+                                <p><span>しまなみ合気会様</span></p>
+                                <p>Flyer</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="banner">
+                        <a href="banner01.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/banner01.png" alt="banner01">
+                                </div>
+                                <p><span>Banner Sample</span></p>
+                                <p>Banner</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="banner">
+                        <a href="banner02.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/banner02.png" alt="banner02">
+                                </div>
+                                <p><span>Banner Sample</span></p>
+                                <p>Banner</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="banner">
+                        <a href="banner03.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/banner03.png" alt="banner03">
+                                </div>
+                                <p><span>Banner Sample</span></p>
+                                <p>Banner</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="banner">
+                        <a href="banner04.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/banner04.png" alt="banner04">
+                                </div>
+                                <p><span>Banner Sample</span></p>
+                                <p>Banner</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="banner">
+                        <a href="banner05.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/banner05.png" alt="banner05">
+                                </div>
+                                <p><span>Banner Sample</span></p>
+                                <p>Banner</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="banner">
+                        <a href="banner06.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/banner06.png" alt="banner06">
+                                </div>
+                                <p><span>Banner Sample</span></p>
+                                <p>Banner</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="web">
+                        <a href="works04.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/works04.png" alt="works04">
+                                </div>
+                                <p><span>DESIGN CAFE様（架空）</span></p>
+                                <p>WEBsite</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="web">
+                        <a href="works05.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/works05.png" alt="works05">
+                                </div>
+                                <p><span>WORKERS様（架空）</span></p>
+                                <p>WEBsite</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-item="web">
+                        <a href="works06.html">
+                            <div class="view">
+                                <div class="works_img">
+                                    <img src="./images/1x/works06.png" alt="works06">
+                                </div>
+                                <p><span>FiTRiSE様（架空）</span></p>
+                                <p>WEBsite</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section data-scroll-section class="scroll_section">
+            <div class="works_wrap margin">
+                <h2></h2>
+                <p>このほかにも実績多数ございます。<br>
+                    詳しくはお問い合わせください。</p>
+                <p class="btn_arrow">
+                    <a href="contact.html">お問い合わせはコチラ</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+
+    <script>
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle().toggleClass('open');
+                $('#sp_btn').toggleClass('open');
+            })
+        })
+    </script>
+
+    <script>
+            (() => {
+                document.addEventListener('DOMContentLoaded', () => {
+                    // new LocomotiveScroll({
+                    //     el: document.querySelector('[data-scroll-container]'),
+                    //     direction: 'horizontal',
+                    //     smooth: true,
+                    //     tablet: {
+                    //         direction: 'horizontal',
+                    //         smooth: true,
+                    //     },
+                    //     smartphone: {
+                    //         smooth: false,
+                    //         direction: 'vertical',
+                    //     },
+                    // })
+                    // Locomotive Scroll のインスタンスを初期化
+
+                    /******* 平垣内追加箇所 *******/
+
+                    // デバイスの種類を判別
+                    function detectDevice() {
+                        const width = window.innerWidth;
+
+                        if (width > 1024) {
+                            return 'pc';
+                        } else if (width > 768) {
+                            return 'tablet';
+                        } else {
+                            return 'mobile';
+                        }
+                    }
+
+                    // デバイスに応じてクラスを追加
+                    function setDeviceClass() {
+                        const device = detectDevice();
+                        document.body.classList.remove('pc', 'tablet', 'mobile');
+                        document.body.classList.add(device);
+                    }
+                    function initializeLocomotiveScroll() {
+                        const device = detectDevice();
+                        let scroll;
+
+                        if (device === 'pc' || device === 'tablet') {
+                            scroll = new LocomotiveScroll({
+                                el: document.querySelector('[data-scroll-container]'),
+                                smooth: true,
+                                direction: 'horizontal', // PCとタブレットは横スクロール
+                            });
+                        } else {
+                            scroll = new LocomotiveScroll({
+                                el: document.querySelector('[data-scroll-container]'),
+                                smooth: false,
+                                direction: 'vertical', // スマホ表示時は縦スクロール
+                            });
+                        }
+                        return scroll;
+                    }
+
+                    // ページ表示時にデバイスを判別（初期化）
+                    setDeviceClass();
+                    let locoScroll = initializeLocomotiveScroll();
+
+                    // ウィンドウサイズの変更を監視して再初期化
+                    window.addEventListener('resize', () => {
+                        const currentDevice = document.body.className;
+                        console.log(currentDevice)
+                        setDeviceClass();
+
+                        if (currentDevice !== detectDevice()) {
+                            locoScroll.destroy();  // 既存のスクロール設定を破棄
+                            locoScroll = initializeLocomotiveScroll();  // 新しい設定を作成
+                        }
+                    });
+                    /****************************/
+                })
+            })()
+    </script>
+
+    <script>
+        $(function () {
+            $(".filter-list").hover(
+                function () {
+                    //クラス名「open」を付与する
+                    $(this).children(".popup").addClass("open");
+                    //hoverが外れた場合
+                }, function () {
+                    //クラス名「open」を取り除く
+                    $(this).children(".popup").removeClass("open");
+                }
+            );
+        });
+    </script>
+
+    <script>
+        $(function () {
+            var $filter = $('.filter-list [data-filter]')
+            var $item = $(('.filter-item [data-item]'))
+
+            $filter.click(function (event) {
+                event.preventDefault()
+                var $this = $(this)
+                console.log($this)
+
+                $filter.removeClass('is-active')
+                $this.addClass('is-active')
+
+                var $filterItem = $this.attr('data-filter')
+                console.log($filterItem)
+
+                if ($filterItem == 'all') {
+                    $item.removeClass('is-active').fadeOut().promise().done(function () {
+                        $item.addClass('is-active').fadeIn()
+                    })
+                } else {
+                    $item.removeClass('is-active').fadeOut().promise().done(function () {
+                        $item.filter(function () {
+                            var categories = $(this).data('item').split(',')
+                            return categories.includes($filterItem)
+                        }).addClass('is-active').fadeIn()
+                    })
+                }
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+
+    <script>
+        inView('.view')
+            .on('enter', el => {
+                //ビューインしたら実行
+                el.style.opacity = 1;
+            })
+            .on('exit', el => {
+                //ビューアウトしたら実行
+                el.style.opacity = 0;
+            });
+        inView.offset({
+            top: 100,
+            left: 100,
+        });
+    </script>
+</body>
+
+</html>

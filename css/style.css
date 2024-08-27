@@ -1027,6 +1027,10 @@ button {
     width: 360px;
   }
 
+  .filter-item {
+    height: 300px;
+  }
+
   .back {
     font-weight: 500;
     right: 0;

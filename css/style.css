@@ -268,7 +268,7 @@
 }
 
 .about_box {
-  height: 600px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,7 +314,7 @@
 
 .scroll {
   width: 285px;
-  animation: textannounce 3s linear infinite;
+  animation: textannounce 5s linear infinite;
 }
 
 @keyframes textannounce {
@@ -358,7 +358,7 @@
 }
 
 .bio_container div {
-  height: 500px;
+  height: 450px;
   width: 250px;
   padding: 0 60px 0 20px;
   border-right: 1px dashed #fff;
@@ -403,63 +403,6 @@
   display: block;
   content: "";
   height: 10px;
-}
-
-/* タイムライン全体の設定 */
-.bio_timeline {
-  width: 100%;
-  margin: 50px auto;
-  padding: 0 30px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bio_timeline li {
-  /*線の起点とするためrelativeを設定*/
-  position: relative;
-  list-style: none;
-  padding: 0 0 20px 0;
-}
-
-.bio_timeline dl {
-  margin: 0 3em 20px 3em;
-  white-space: wrap;
-  width: 250px;
-  height: 500px;
-}
-
-.bio_timeline dt {
-  font-weight: 600;
-  padding-bottom: 10px;
-}
-
-.bio_timeline dd {
-  line-height: 2.33;
-}
-
-/*絶対配置で線を設定*/
-.border-line {
-  /*線の位置*/
-  position: absolute;
-  left: 0.1em;
-  top: 0;
-  width: 1px; /*線の太さ*/
-  height: 1px; /*はじめは高さを0に*/
-  background: #fff;
-}
-
-/*タイムラインの見出し横の丸の位置と形状*/
-.bio_timeline li::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -2px;
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border-radius: 50%;
 }
 
 /* skills */

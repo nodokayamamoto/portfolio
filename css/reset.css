@@ -183,7 +183,7 @@ button:hover {
     0 0 0.8em rgba(255, 255, 255, 0.3);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 835px) {
   html,
   body,
   h1,

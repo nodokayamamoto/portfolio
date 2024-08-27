@@ -236,10 +236,17 @@
     padding-bottom: 20vh;
   }
 
+  .contents_box.second_contents {
+    margin-right: auto;
+  }
+
   .second_contents {
     height: fit-content;
     padding-top: 0;
     padding-bottom: 0;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .contents_box div {

@@ -296,34 +296,50 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
                         if (width > 1024) {
                             return 'pc';
-                        } else if (width > 768) {
+                        } else if (width > 836) {
                             return 'tablet';
                         } else {
-                            return 'mobile';
+                            return 'smartphone';
                         }
                     }
 
                     // デバイスに応じてクラスを追加
                     function setDeviceClass() {
                         const device = detectDevice();
-                        document.body.classList.remove('pc', 'tablet', 'mobile');
+                        document.body.classList.remove('pc', 'tablet', 'smartphone');
                         document.body.classList.add(device);
                     }
                     function initializeLocomotiveScroll() {
                         const device = detectDevice();
                         let scroll;
 
-                        if (device === 'pc' || device === 'tablet') {
+                        if (device === 'pc') {
                             scroll = new LocomotiveScroll({
                                 el: document.querySelector('[data-scroll-container]'),
                                 smooth: true,
                                 direction: 'horizontal', // PCとタブレットは横スクロール
                             });
+                        } else if (device === 'tablet') {
+                            scroll = new LocomotiveScroll({
+                                el: document.querySelector('[data-scroll-container]'),
+                                smooth: true,
+                                direction: 'horizontal', // PCとタブレットは横スクロール
+                                tablet: {
+                                    breakpoint: 0,
+                                    direction: 'horizontal',
+                                    smooth: true,
+                                }
+                            });
                         } else {
                             scroll = new LocomotiveScroll({
                                 el: document.querySelector('[data-scroll-container]'),
-                                smooth: false,
+                                smooth: true,
                                 direction: 'vertical', // スマホ表示時は縦スクロール
+                                smartphone: {
+                                    breakpoint: 0,
+                                    direction: 'vertical',
+                                    smooth: false,
+                                },
                             });
                         }
                         return scroll;
@@ -336,7 +352,6 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     // ウィンドウサイズの変更を監視して再初期化
                     window.addEventListener('resize', () => {
                         const currentDevice = document.body.className;
-                        console.log(currentDevice)
                         setDeviceClass();
 
                         if (currentDevice !== detectDevice()) {

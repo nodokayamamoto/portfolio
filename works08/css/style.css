@@ -991,6 +991,9 @@ footer {
   .mato {
     width: 80vw;
   }
+  #goods h2 {
+    margin-bottom: 70px;
+  }
 
   .goods-container {
     flex-direction: column;
@@ -1016,6 +1019,7 @@ footer {
   .goods-script {
     padding: 0 20px;
     display: flex;
+    margin-top: 70px;
   }
 
   #deliver {

@@ -69,6 +69,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  white-space: nowrap;
   gap: 30px;
   position: absolute;
   top: 0;
@@ -90,10 +91,9 @@ header {
   height: 90vh;
   background-image: url(../images/1x/fv-pc-80.jpg);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
-  background-color: #111;
   position: relative;
+  background-color: #111;
 }
 
 #firstview h2 {
@@ -162,13 +162,22 @@ header {
   margin-bottom: 100px;
 }
 
+.goods-container {
+  height: 280px;
+  display: flex;
+  overflow: hidden;
+}
+
 .goods-back {
   position: relative;
   width: 100%;
   height: 280px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .goods01-back::before {
@@ -176,12 +185,14 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: 80%;
   animation: zoom 10s 1;
   animation-fill-mode: forwards;
-  background-image: url(../images/1x/goods01-pc.png);
-  background-position: top left;
+  background-image: url(../images/1x/goods01-pc.jpg);
+  clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0% 100%);
+  position: absolute;
 }
 
 .goods02-back::before {
@@ -189,13 +200,15 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: 80%;
   -webkit-animation: zoom 10s 1;
   animation: zoom 10s 1;
   animation-fill-mode: forwards;
-  background-image: url(../images/1x/goods02-pc.png);
-  background-position: top right;
+  background-image: url(../images/1x/goods02-pc.jpg);
+  clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0% 100%);
+  position: absolute;
 }
 
 .goods03-back::before {
@@ -203,13 +216,15 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: 80%;
   -webkit-animation: zoom 10s 1;
   animation: zoom 10s 1;
   animation-fill-mode: forwards;
-  background-image: url(../images/1x/goods03-pc.png);
-  background-position: top left;
+  background-image: url(../images/1x/goods03-pc.jpg);
+  clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0% 100%);
+  position: absolute;
 }
 
 @keyframes zoom {
@@ -222,29 +237,12 @@ header {
 }
 
 .goods-box {
-  max-width: 1000px;
-  width: 100%;
-  height: 280px;
-  margin: 0 auto;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-}
-
-.goods-box.goods01,
-.goods-box.goods03 {
-  text-align: right;
-  justify-content: right;
-}
-
-.goods-box.goods02 {
-  text-align: left;
-  justify-content: left;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
 .goods-box p {
@@ -252,7 +250,95 @@ header {
   font-size: 120px;
   line-height: 1;
   margin: 0;
-  z-index: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
+}
+
+.box__line1,
+.box__line3 {
+  position: absolute;
+  width: 150px;
+  height: 2px;
+}
+
+.box__line2,
+.box__line4 {
+  position: absolute;
+  width: 2px;
+  height: 150px;
+}
+
+.box__line1 {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, transparent, #fff);
+  animation: animate1 2s linear infinite;
+}
+
+.box__line2 {
+  top: 0;
+  right: 0;
+  background: linear-gradient(to bottom, transparent, #fff);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.box__line3 {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left, transparent, #fff);
+  animation: animate3 2s linear infinite;
+}
+
+.box__line4 {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, transparent, #fff);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .goods-script {
@@ -270,11 +356,9 @@ header {
   text-align: right;
   background-image: url(../images/1x/deliver-back-pc-80.jpg);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   background-size: cover;
-  background-color: #fff;
   position: relative;
+  background-color: #fff;
 }
 
 .deliver-container {
@@ -399,11 +483,9 @@ button:hover {
   text-align: center;
   background-image: url(../images/1x/access-back-pc-80.jpg);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   background-size: cover;
-  background-color: #fff;
   position: relative;
+  background-color: #fff;
 }
 
 .access-container {
@@ -451,8 +533,6 @@ button:hover {
   text-align: center;
   background-image: url(../images/1x/news-back-pc-80.jpg);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   background-size: cover;
   background-color: #fff;
   position: relative;
@@ -722,9 +802,6 @@ footer {
     font-size: 24px;
   }
 
-  /*=============================
-.btn-trigger
-=============================*/
   .sp-btn {
     position: relative;
     width: 30px;
@@ -915,17 +992,15 @@ footer {
     width: 80vw;
   }
 
-  .goods01-back::before {
-    background-image: url(../images/2x/goods01-sp@2x-80.jpg);
+  .goods-container {
+    flex-direction: column;
+    gap: 50px;
+    height: 100%;
   }
 
-  .goods02-back::before {
-    background-image: url(../images/2x/goods02-sp@2x-80.jpg);
-  }
-
-  .goods03-back::before {
-    background-image: url(../images/2x/goods03-sp@2x-80.jpg);
-    background-position: bottom left;
+  .goods-back {
+    height: 280px;
+    overflow: hidden;
   }
 
   .goods-box {

@@ -81,19 +81,33 @@
 
     <section id="goods">
         <h2>取扱商品</h2>
-        <div class="goods-back goods01-back view">
-            <div class="goods-box goods01">
-                <p>弓</p>
+        <div class="goods-container">
+            <div class="goods-back goods01-back view">
+                <div class="goods-box goods01">
+                    <p>弓</p>
+                    <span class="box__line1"></span>
+                    <span class="box__line2"></span>
+                    <span class="box__line3"></span>
+                    <span class="box__line4"></span>
+                </div>
             </div>
-        </div>
-        <div class="goods-back goods02-back view">
-            <div class=" goods-box goods02">
-                <p>矢</p>
+            <div class="goods-back goods02-back view">
+                <div class=" goods-box goods02">
+                    <p>矢</p>
+                    <span class="box__line1"></span>
+                    <span class="box__line2"></span>
+                    <span class="box__line3"></span>
+                    <span class="box__line4"></span>
+                </div>
             </div>
-        </div>
-        <div class="goods-back goods03-back view">
-            <div class="goods-box goods03">
-                <p>弽</p>
+            <div class="goods-back goods03-back view">
+                <div class="goods-box goods03">
+                    <p>弽</p>
+                    <span class="box__line1"></span>
+                    <span class="box__line2"></span>
+                    <span class="box__line3"></span>
+                    <span class="box__line4"></span>
+                </div>
             </div>
         </div>
         <div class="goods-script">
@@ -311,10 +325,67 @@
                 $('.sp-btn').toggleClass('open');
                 return false;
             })
+            $('.sp-nav a[href]').on('click', function (event) {
+                $('.sp-btn').trigger('click');
+            });
         })
-    </script>
 
-    <script>
+        $(function () {
+            var target1 = $("#firstview");
+            var targetPosOT1 = target1.offset().top;
+            var targetFactor = 0.5;
+            var windowH = $(window).height();
+            var scrollYStart1 = targetPosOT1 - windowH;
+            $(window).on('scroll', function () {
+                var scrollY = $(this).scrollTop();
+                if (scrollY > scrollYStart1) {
+                    target1.css('background-position-y', (scrollY - targetPosOT1) * targetFactor + 'px');
+                }
+            });
+        });
+
+        $(function () {
+            var target1 = $("#deliver");
+            var targetPosOT1 = target1.offset().top;
+            var targetFactor = 0.5;
+            var windowH = $(window).height();
+            var scrollYStart1 = targetPosOT1 - windowH;
+            $(window).on('scroll', function () {
+                var scrollY = $(this).scrollTop();
+                if (scrollY > scrollYStart1) {
+                    target1.css('background-position-y', (scrollY - targetPosOT1) * targetFactor + 'px');
+                }
+            });
+        });
+
+        $(function () {
+            var target1 = $("#access");
+            var targetPosOT1 = target1.offset().top;
+            var targetFactor = 0.5;
+            var windowH = $(window).height();
+            var scrollYStart1 = targetPosOT1 - windowH;
+            $(window).on('scroll', function () {
+                var scrollY = $(this).scrollTop();
+                if (scrollY > scrollYStart1) {
+                    target1.css('background-position-y', (scrollY - targetPosOT1) * targetFactor + 'px');
+                }
+            });
+        });
+
+        $(function () {
+            var target1 = $("#news");
+            var targetPosOT1 = target1.offset().top;
+            var targetFactor = 0.5;
+            var windowH = $(window).height();
+            var scrollYStart1 = targetPosOT1 - windowH;
+            $(window).on('scroll', function () {
+                var scrollY = $(this).scrollTop();
+                if (scrollY > scrollYStart1) {
+                    target1.css('background-position-y', (scrollY - targetPosOT1) * targetFactor + 'px');
+                }
+            });
+        });
+
         inView('.view')
             .on('enter', el => {
                 //ビューインしたら実行

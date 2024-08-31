@@ -11,22 +11,59 @@
 </head>
 
 <body>
+    <div id="loading">
+        <!--SVG-->
+        <div class="svganimeblock">
+            <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 778.47 778.47">
+                <path
+                    d="M389.24,65c179.07,0,324.24,145.17,324.24,324.24s-145.17,324.24-324.24,324.24S65,568.31,65,389.24,210.17,65,389.24,65M389.24,0c-52.52,0-103.5,10.3-151.53,30.61-46.36,19.61-87.98,47.66-123.7,83.39-35.73,35.73-63.78,77.35-83.39,123.7C10.3,285.74,0,336.72,0,389.24s10.3,103.5,30.61,151.53c19.61,46.36,47.66,87.98,83.39,123.7,35.73,35.73,77.35,63.78,123.7,83.39,48.03,20.31,99.01,30.61,151.53,30.61s103.5-10.3,151.53-30.61c46.36-19.61,87.98-47.66,123.7-83.39,35.73-35.73,63.78-77.35,83.39-123.7,20.31-48.03,30.61-99.01,30.61-151.53s-10.3-103.5-30.61-151.53c-19.61-46.36-47.66-87.98-83.39-123.7-35.73-35.73-77.35-63.78-123.7-83.39C492.74,10.3,441.75,0,389.24,0h0Z" />
+                <path
+                    d="M389.24,153.77c31.8,0,62.64,6.22,91.65,18.49,28.04,11.86,53.22,28.84,74.86,50.48,21.63,21.63,38.62,46.82,50.47,74.86,12.27,29.01,18.49,59.84,18.49,91.65s-6.22,62.64-18.49,91.65c-11.86,28.04-28.84,53.22-50.47,74.86-21.63,21.63-46.82,38.62-74.86,50.48-29.01,12.27-59.84,18.49-91.65,18.49s-62.64-6.22-91.65-18.49c-28.04-11.86-53.22-28.84-74.86-50.48s-38.62-46.82-50.48-74.86c-12.27-29.01-18.49-59.84-18.49-91.65s6.22-62.64,18.49-91.65c11.86-28.04,28.84-53.22,50.48-74.86s46.82-38.62,74.86-50.48c29.01-12.27,59.84-18.49,91.65-18.49M389.24,123.77c-146.61,0-265.47,118.85-265.47,265.47s118.85,265.47,265.47,265.47,265.47-118.85,265.47-265.47S535.85,123.77,389.24,123.77h0Z" />
+                <path
+                    d="M389.24,310.57c43.38,0,78.67,35.29,78.67,78.67s-35.29,78.67-78.67,78.67-78.67-35.29-78.67-78.67,35.29-78.67,78.67-78.67M389.24,215.57c-95.92,0-173.67,77.76-173.67,173.67s77.76,173.67,173.67,173.67,173.67-77.75,173.67-173.67-77.76-173.67-173.67-173.67h0Z" />
+            </svg>
+            <!--/svganimeblock-->
+        </div>
+
+    </div>
+
+
+
+
     <header id="header">
-        <img src="./images/SVG/logo-white.svg" alt="三光弓具店ロゴマーク" class="header-logo">
-        <h1>三光弓具店</h1>
+        <div class="header-logo">
+            <img src="./images/SVG/logo-white.svg" alt="三光弓具店ロゴマーク">
+            <h1>三光弓具店</h1>
+        </div>
+        <div class="sp-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
+    <nav class="sp-nav pc-hidden">
+        <ul>
+            <li><a href="#concept">三光弓具店について</a></li>
+            <li><a href="#goods">取扱商品</a></li>
+            <li><a href="#deliver">全国配達</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="#access">アクセス</a></li>
+            <li><a href="#news">最新情報</a></li>
+        </ul>
+    </nav>
+
     <section id="firstview">
-        <h2 class="fadeIn">伝統の技が<br>
+        <h2 class="fadeIn delay">伝統の技が<br>
             　　　一射に宿る</h2>
-        <nav class="pc-nav fadeIn delay">
+        <nav class="pc-nav sp-hidden">
             <ul>
-                <li><a href="#concept">三光弓具店について</a></li>
-                <li><a href="#goods">取扱商品</a></li>
-                <li><a href="#deliver">全国配達</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-                <li><a href="#access">アクセス</a></li>
-                <li><a href="#news">最新情報</a></li>
+                <li class="slideIn"><a href="#concept">三光弓具店について</a></li>
+                <li class="slideIn"><a href="#goods">取扱商品</a></li>
+                <li class="slideIn"><a href="#deliver">全国配達</a></li>
+                <li class="slideIn"><a href="#contact">お問い合わせ</a></li>
+                <li class="slideIn"><a href="#access">アクセス</a></li>
+                <li class="slideIn"><a href="#news">最新情報</a></li>
             </ul>
         </nav>
     </section>
@@ -35,26 +72,26 @@
         <img src="images/SVG/logo-black.svg" alt="三光弓具店ロゴマーク" class="view">
         <h2>三光弓具店について</h2>
         <div class="concept-box">
-            <p>三光弓具店は職人の手仕事でつくる伝統の弓具を多数取り扱っております。</p>
-            <p>伝統の技でつくる弓具はひとりひとりの体にしなやかにフィットし、<br>
+            <p>三光弓具店は<br class="pc-hidden">職人の手仕事でつくる伝統の弓具を<br class="pc-hidden">多数取り扱っております。</p>
+            <p>伝統の技でつくる弓具は<br class="pc-hidden">ひとりひとりの体にしなやかにフィットし、<br>
                 力強い一射を生み出します。</p>
-            <p>地元愛媛の素材を使った美しい弓具は、明治の頃より多くの弓道家に愛されています。</p>
+            <p>地元愛媛の素材を使った美しい弓具は、<br class="pc-hidden">明治の頃より多くの弓道家に愛されています。</p>
         </div>
     </section>
 
     <section id="goods">
         <h2>取扱商品</h2>
-        <div class="goods-back goods01 view">
+        <div class="goods-back goods01-back view">
             <div class="goods-box goods01">
                 <p>弓</p>
             </div>
         </div>
-        <div class="goods-back goods02 view">
+        <div class="goods-back goods02-back view">
             <div class=" goods-box goods02">
                 <p>矢</p>
             </div>
         </div>
-        <div class="goods-back goods03 view">
+        <div class="goods-back goods03-back view">
             <div class="goods-box goods03">
                 <p>弽</p>
             </div>
@@ -62,7 +99,7 @@
         <div class="goods-script">
             <p>一点物の弓具だけでなく弦や粉などの小物まで、<br>
                 弓道に必要なすべての道具が揃います。</p>
-            <p>ぜひ三光の弓具を実際に手にとり、伝統の技を感じてください。</p>
+            <p>ぜひ三光の弓具を実際に手にとり、<br class="pc-hidden">伝統の技を感じてください。</p>
         </div>
         <img src="./images/1x/goods-back-mato.png" alt="的のシルエット" class="mato view">
     </section>
@@ -75,13 +112,13 @@
             <p>三光弓具店はネット通販や配送を使用せず、<br>
                 社員自らお客様の元へ弓具を配達します。<br>
                 <br>
-                店舗にご来店いただけないお客様にも、三光の弓具を手に取って触っていただきたい。<br>
-                職人の技を直に感じ、納得してお選びいただけます。<br>
+                店舗にご来店いただけないお客様にも、<br class="pc-hidden">三光の弓具を手に取って触っていただきたい。<br>
+                職人の技を直に感じ、<br class="pc-hidden">納得してお選びいただけます。<br>
                 <br>
-                すべての販売車に巻藁をご用意しておりますので、<br>
+                すべての販売車に<br class="pc-hidden">巻藁をご用意しておりますので、<br>
                 場所の条件を満たせば試射も可能です。<br>
                 <br>
-                また、配達先での弓具のメンテナンスやお見積りも承ります。<br>
+                また、配達先での弓具のメンテナンスや<br class="pc-hidden">お見積りも承ります。<br>
                 ささいなお悩みもお気軽にご相談ください。
             </p>
         </div>
@@ -95,18 +132,18 @@
             </div>
             <p><span>0000-00-0000</span></p>
         </div>
-        <div class="contact-form">
+        <div class="contact-form view">
             <div class="form-box">
                 <p>お名前</p>
-                <div class="form"></div>
+                <input class="c-form_input" id="field-name" placeholder="三光 太郎" type="text">
             </div>
             <div class="form-box">
                 <p>メール</p>
-                <div class="form"></div>
+                <input class="c-form_input" id="field-mail" placeholder="sankou@mail.xxx" type="text">
             </div>
-            <div class="input-box">
+            <div class="message-box">
                 <p>ご用件</p>
-                <div class="input"></div>
+                <textarea class="c-form_input" id="field-message" type="text"></textarea>
             </div>
             <div class="button">
                 <button class="submit">送信する</button>
@@ -117,10 +154,12 @@
     <section id="access">
         <div class="access-container">
             <h2>アクセス</h2>
-            <p><span>愛媛県今治市出子町1丁目XX番地</span></p>
-            <img src="./images/SVG/map.svg" alt="アクセスマップ">
-            <p>店舗敷地内に巻藁のご用意があり、また近隣に公営の弓道場もございます。<br>
-                試射をご希望の方はお気軽にお申し付けください。</p>
+            <p class="view"><span>愛媛県今治市出子町1丁目XX番地</span></p>
+            <img src="./images/SVG/map.svg" alt="アクセスマップ" class="view">
+            <p>店舗敷地内に巻藁のご用意があり、<br class="pc-hidden">また近隣に公営の弓道場もございます。<br>
+                <br class="pc-hidden">
+                試射をご希望の方は<br class="pc-hidden">お気軽にお申し付けください。
+            </p>
             <div class="access-info">
                 <div class="info-box">
                     <p>営業時間</p>
@@ -201,12 +240,79 @@
 
     <div class=" top-button">
         <a href="#header">
-            <img src="./images/SVG/arrow.svg">
             <p>トップへもどる</p>
+            <div class="arrow"></div>
         </a>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+
+    <script>
+        //SVGの初期設定
+
+        var logoVivus1;//SVG設定
+
+
+        //SVG初期設定
+        function VivusInit() {
+            logoVivus1 = new Vivus('logo',
+                {
+                    start: 'autostart',//アニメーションの自動再生
+                    duration: 100, //アニメーションの時間。数字が小さくなれば速くなり、大きくなれば遅くなる
+                    type: 'scenario',// アニメーションのタイプを設定
+                    pathTimingFunction: Vivus.EASE,//動きの加速減速設定
+                },
+                function (obj) {
+                    $("#logo").attr("class", "done");//描画が終わったらdoneというクラスを追加
+                }
+            );
+            logoVivus1.stop();
+        }
+
+
+
+        //スクロールをしたらSVGが出現する設定
+        function VivusAnime() {
+            //スクロールをしたら1つめのSVG id="logo"が出現する設定
+            var elemPos = $("#logo").offset().top - 50;//要素より、50px上の位置まで来たら出現
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll >= elemPos - windowHeight) {
+                logoVivus1.play(1);//描画される速さ。数が大きくなるほど速い
+            }
+        }
+
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
+            VivusAnime();/* SVGアニメーション用の関数を呼ぶ*/
+        });
+        // ここまで画面をスクロールをしたら動かしたい場合の記述
+
+        // 画面が読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            VivusInit(); //SVG初期設定
+            VivusAnime();/* SVGアニメーション用の関数を呼ぶ*/
+        });
+        // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+        //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+        $("#loading").delay(5000).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+
+            $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+
+        });
+        //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+
+
+        $(function () {
+            $('.sp-btn').on('click', function () {
+                $('.sp-nav').fadeToggle().toggleClass('open');
+                $('.sp-btn').toggleClass('open');
+                return false;
+            })
+        })
+    </script>
 
     <script>
         inView('.view')

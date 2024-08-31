@@ -3,12 +3,12 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: visible;
+  overflow-x: hidden;
 }
 
 body {
   position: relative;
-  overflow: visible;
+  overflow-x: hidden;
 }
 
 html,
@@ -27,14 +27,14 @@ button {
   letter-spacing: 0.1em;
   font-family: "Noto sefif JP", serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #111;
   font-feature-settings: "palt";
 }
 
 h2 {
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 ul {
@@ -51,4 +51,39 @@ a {
   text-decoration: none;
   color: inherit;
   transition: 0.3s;
+}
+
+.pc-hidden {
+  display: none;
+}
+
+.sp-hidden {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  body,
+  h1,
+  h3,
+  dl,
+  dt,
+  dd,
+  ul,
+  li,
+  button {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .pc-hidden {
+    display: block;
+  }
+
+  .sp-hidden {
+    display: none;
+  }
 }

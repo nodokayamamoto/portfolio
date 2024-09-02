@@ -1247,7 +1247,7 @@ button {
   }
 
   .margin {
-    display: none;
+    opacity: 0;
   }
 
   .back {

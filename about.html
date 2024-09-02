@@ -322,19 +322,88 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
         (() => {
             document.addEventListener('DOMContentLoaded', () => {
-                new LocomotiveScroll({
-                    el: document.querySelector('[data-scroll-container]'),
-                    direction: 'horizontal',
-                    smooth: true,
-                    tablet: {
-                        direction: 'horizontal',
-                        smooth: true,
-                    },
-                    smartphone: {
-                        direction: 'vertical',
-                        smooth: false,
+                // new LocomotiveScroll({
+                //     el: document.querySelector('[data-scroll-container]'),
+                //     direction: 'horizontal',
+                //     smooth: true,
+                //     tablet: {
+                //         direction: 'horizontal',
+                //         smooth: true,
+                //     },
+                //     smartphone: {
+                //         direction: 'vertical',
+                //         smooth: false,
+                //     }
+                // })
+                function detectDevice() {
+                    const width = window.innerWidth;
+
+                    if (width > 1024) {
+                        return 'pc';
+                    } else if (width > 836) {
+                        return 'tablet';
+                    } else {
+                        return 'smartphone';
                     }
-                })
+                }
+
+                // デバイスに応じてクラスを追加
+                function setDeviceClass() {
+                    const device = detectDevice();
+                    document.body.classList.remove('pc', 'tablet', 'smartphone');
+                    document.body.classList.add(device);
+                }
+                function initializeLocomotiveScroll() {
+                    const device = detectDevice();
+                    let scroll;
+
+                    if (device === 'pc') {
+                        scroll = new LocomotiveScroll({
+                            el: document.querySelector('[data-scroll-container]'),
+                            smooth: true,
+                            direction: 'horizontal', // PCとタブレットは横スクロール
+                        });
+                    } else if (device === 'tablet') {
+                        scroll = new LocomotiveScroll({
+                            el: document.querySelector('[data-scroll-container]'),
+                            smooth: true,
+                            direction: 'horizontal', // PCとタブレットは横スクロール
+                            tablet: {
+                                breakpoint: 0,
+                                direction: 'horizontal',
+                                smooth: true,
+                            }
+                        });
+                    } else {
+                        scroll = new LocomotiveScroll({
+                            el: document.querySelector('[data-scroll-container]'),
+                            smooth: true,
+                            direction: 'vertical', // スマホ表示時は縦スクロール
+                            smartphone: {
+                                breakpoint: 0,
+                                direction: 'vertical',
+                                smooth: false,
+                            },
+                        });
+                    }
+                    return scroll;
+                }
+
+                // ページ表示時にデバイスを判別（初期化）
+                setDeviceClass();
+                let locoScroll = initializeLocomotiveScroll();
+
+                // ウィンドウサイズの変更を監視して再初期化
+                window.addEventListener('resize', () => {
+                    const currentDevice = document.body.className;
+                    setDeviceClass();
+
+                    if (currentDevice !== detectDevice()) {
+                        locoScroll.destroy();  // 既存のスクロール設定を破棄
+                        locoScroll = initializeLocomotiveScroll();  // 新しい設定を作成
+                    }
+                });
+                /****************************/
             })
         })()
     </script>

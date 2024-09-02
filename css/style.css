@@ -734,7 +734,7 @@ body:before {
   margin-left: 20vw;
 }
 
-.margin {
+.works_contact {
   margin-right: 20vw;
   text-align: center;
 }
@@ -1246,8 +1246,12 @@ button {
     width: 280px;
   }
 
-  .margin {
-    opacity: 0;
+  .works_wrap {
+    width: 5600px;
+  }
+
+  .works_contact {
+    display: none;
   }
 
   .back {

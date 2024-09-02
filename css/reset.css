@@ -3,12 +3,14 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: visible;
+  overflow-x: visible;
+  overflow-y: hidden;
 }
 
 body {
   position: relative;
-  overflow: visible;
+  overflow-x: visible;
+  overflow-y: hidden;
 }
 
 html,
@@ -196,6 +198,7 @@ button:hover {
   html,
   body {
     overflow-x: hidden;
+    overflow-y: visible;
   }
 
   html,

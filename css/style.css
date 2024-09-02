@@ -627,6 +627,10 @@ body:before {
   cursor: url("../images/1x/cursor_click.png"), auto;
 }
 
+.modal_contents video {
+  width: 700px;
+}
+
 .overlay {
   display: none;
   position: fixed;

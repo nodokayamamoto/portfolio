@@ -500,6 +500,10 @@
     width: 200px;
   }
 
+  .modal_contents video {
+    width: 250px;
+  }
+
   .dli-caret-right {
     transform: rotate(90deg);
   }

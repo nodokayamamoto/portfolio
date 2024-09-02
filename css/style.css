@@ -1246,6 +1246,10 @@ button {
     width: 280px;
   }
 
+  .margin {
+    display: none;
+  }
+
   .back {
     font-weight: 500;
     right: 0;

@@ -722,7 +722,7 @@ body:before {
 .works_wrap {
   height: 100vh;
   width: max-content;
-  margin-left: 20vw;
+  margin-left: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -731,6 +731,7 @@ body:before {
 
 .works_head {
   width: 40px;
+  margin-left: 20vw;
 }
 
 .margin {

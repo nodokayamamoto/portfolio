@@ -572,8 +572,9 @@
   }
 
   .works_head {
+    margin: 0;
     width: 30px;
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 20px;
     transform: translate(-50%) rotate(90deg);

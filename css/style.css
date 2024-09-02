@@ -648,6 +648,12 @@ body:before {
 
 /* works--------------------------------------------------------------------------- */
 
+.works_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .filter-list.pc_filter {
   position: fixed;
   left: 90px;

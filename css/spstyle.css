@@ -518,6 +518,10 @@
 
   /* works--------------------------------------------------------------------------- */
 
+  .works_wrapper {
+    flex-direction: column;
+  }
+
   .works_wrap {
     height: max-content;
     width: 225px;
@@ -578,6 +582,7 @@
 
   .margin {
     width: 250px;
+    height: 100vh;
     text-align: center;
     align-items: center;
     gap: 20px;

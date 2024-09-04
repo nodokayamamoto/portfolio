@@ -1,5 +1,25 @@
 @charset "utf-8;";
 
+.c-fixed_target {
+  bottom: -100vh;
+}
+
+.c-fixed,
+.c-fixed_target {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -100vh;
+}
+
+.c-fixed {
+  background-position: 50%;
+  background-size: cover;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
 body:before {
   content: "";
   display: block;

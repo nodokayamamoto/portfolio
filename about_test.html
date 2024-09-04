@@ -44,13 +44,15 @@
     <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
 
     <main data-scroll-container class="fadeUp">
-        <section data-scroll-section class="scroll_section">
+        <section data-scroll-section class="scroll_section" data-persistent>
             <div class="about_wrap">
                 <div class="about_box">
                     <h2>
                         <img src="./images/SVG/head_about.svg" class="about_me shadow" alt="about me">
                     </h2>
-                    <img src=" ./images/1x/prof02_pc-80.jpg" class="prof02 view" alt="プロフィール写真">
+                    <div class="c-fixed" data-scroll data-scroll-sticky data-scroll-target="#fixed-target"
+                        style="background-image:url('/images/1x/prof02_pc-80.jpg')"></div>
+                    <!-- <img src=" ./images/1x/prof02_pc-80.jpg" class="prof02 view" alt="プロフィール写真"> -->
                     <div class="about_detail">
                         <div class="about_name">
                             <p>山本 和</p>

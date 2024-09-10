@@ -20,7 +20,7 @@
         <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
     </header>
 
-    <nav>
+    <nav id="pc_nav_wrapper">
         <ul id="pc_nav">
             <li><a href="contact.html">contact</a></li>
             <li><a href="works.html">works</a></li>
@@ -43,14 +43,17 @@
     <img src="./images/1x/light.png" class="light about_light" alt="light">
     <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
 
-    <main data-scroll-container class="fadeUp">
+    <main data-scroll-container class="fadeUp" id="scroll-container">
         <section data-scroll-section class="scroll_section">
             <div class="about_wrap">
                 <div class="about_box">
                     <h2>
                         <img src="./images/SVG/head_about.svg" class="about_me shadow" alt="about me">
                     </h2>
-                    <img src=" ./images/1x/prof02_pc-80.jpg" class="prof02 view" alt="プロフィール写真">
+                    <img src=" ./images/1x/prof02_pc-80.jpg" class="prof02 view pc_hidden" alt="プロフィール写真">
+                    <div class="prof_image sp_hidden">
+                        <div data-scroll data-scroll-sticky data-scroll-target="#scroll-container"></div>
+                    </div>
                     <div class="about_detail">
                         <div class="about_name">
                             <p>山本 和</p>

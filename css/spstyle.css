@@ -6,7 +6,32 @@
   }
 
   #header {
-    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    border: none;
+    position: fixed;
+  }
+
+  #header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/2x/back_sp@2x-80.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #header h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
   }
 
   main {
@@ -23,7 +48,7 @@
   .sp_hidden {
     display: none;
   }
-
+  #pc_nav_wrapper,
   #pc_nav {
     display: none !important;
   }
@@ -39,12 +64,12 @@
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url("../images/2x/back_sp@2x-80.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 100%;
+    background-position: center top;
   }
 
   /* hamburger menu */
@@ -55,7 +80,7 @@
     position: fixed;
     top: 30px;
     right: 25px;
-    z-index: 99;
+    z-index: 300;
   }
 
   #sp_btn span {
@@ -106,12 +131,12 @@
 
   #sp_nav {
     position: fixed;
-    z-index: 80;
+    z-index: 200;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(51, 51, 51, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   #sp_nav ul {
@@ -184,7 +209,7 @@
   }
 
   .works_light {
-    top: 5vh;
+    top: 25vh;
     right: auto;
     left: 5vw;
   }
@@ -192,11 +217,11 @@
   .detail_light {
     left: 5vw;
     bottom: auto;
-    top: 5vh;
+    top: 35vh;
   }
 
   .banner_light {
-    top: 8vh;
+    top: 20vh;
     right: 2vw;
   }
 
@@ -326,7 +351,7 @@
   .about_detail {
     width: 100%;
     text-align: center;
-    margin-top: 35vh;
+    margin-top: 30vh;
   }
 
   .about_name {

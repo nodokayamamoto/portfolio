@@ -323,9 +323,9 @@
 
     <script>
         const sliderThumbnail = new Swiper("#swiper-thumb", {
-            direction: 'horizontal',
+            direction: 'vertical',
             loop: true,
-            slidesPerView: 3,
+            slidesPerView: 3.5,
             centerdSlides: true,
             speed: 500,
             spaceBetween: 10,
@@ -333,12 +333,6 @@
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                1182: {
-                    direction: 'vertical',
-                    slidesPerView: 3,
-                }
             }
         });
         const slider = new Swiper("#swiper-main", {

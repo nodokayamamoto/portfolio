@@ -823,6 +823,7 @@ body:before {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .swiper {
@@ -952,7 +953,7 @@ figure {
   cursor: url("../images/1x/cursor_click.png"), auto;
 }
 
-@media screen and (max-width: 1182px) {
+/* @media screen and (max-width: 1182px) {
   .works-inner {
     flex-direction: column;
     height: 100%;
@@ -995,7 +996,7 @@ figure {
     right: -40px;
     left: initial;
   }
-}
+} */
 
 /* swiper item */
 

@@ -243,6 +243,7 @@
     white-space: nowrap;
     font-size: 9px;
     opacity: 0.8;
+    z-index: 999;
   }
 
   /* main---------------------------------------------------------------------------- */
@@ -561,13 +562,12 @@
   }
 
   .filter-list.sp_filter {
-    position: fixed;
-    right: 0;
-    bottom: 50px;
+    margin-top: 20px;
+    text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
     white-space: nowrap;
     z-index: 3;
   }
@@ -580,18 +580,15 @@
     width: 125px;
     border: 1px solid #fff;
     background-color: rgba(0, 0, 0, 0.5);
-    border-right: none;
     line-height: 3;
     font-size: 15px;
     font-weight: 500;
     padding: 0 10px;
     box-sizing: border-box;
-    transform: translateX(20px);
     transition: all 0.3s ease-in-out;
   }
 
   .sp_filter li:hover {
-    transform: translateX(0);
     box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3),
       0 0 0.8em rgba(255, 255, 255, 0.3);
   }
@@ -697,6 +694,75 @@
       top: 120px;
       opacity: 0;
     }
+  }
+
+  #works-swiper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .works-inner {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+  }
+
+  #swiper-main .swiper-slide {
+    margin-top: 40px;
+  }
+
+  .works_head {
+    transform: rotate(90deg);
+    position: absolute;
+    top: -80px;
+  }
+
+  .thumb-wrapper {
+    max-width: 500px;
+    width: 100%;
+    height: 150px;
+    position: relative;
+  }
+
+  #swiper-thumb {
+    max-width: 500px;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin: 0;
+    bottom: initial;
+    top: 50%;
+    transform: rotate(0) translateY(-50%);
+  }
+
+  .swiper-button-prev {
+    right: initial;
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+    left: initial;
+  }
+
+  .slide-text {
+    margin-bottom: 60px;
+  }
+
+  .swiper-pagination {
+    bottom: 0 !important;
+  }
+
+  .slide-media,
+  .works01_img {
+    width: 300px;
+    height: 200px;
   }
 
   /* works detail-------------------------------------------------------------------- */

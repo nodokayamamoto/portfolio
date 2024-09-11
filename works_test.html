@@ -30,7 +30,7 @@
         </ul>
     </nav>
 
-    <ul class="filter-list pc_filter">
+    <ul class="filter-list pc_filter sp_hidden">
         <li><a href="">category</a></li>
         <ul class="popup">
             <li data-filter="all" class="is-active">All</li>
@@ -49,15 +49,6 @@
             <li><a href="about.html">about</a></li>
             <li><a href="works.html">works</a></li>
             <li><a href="contact.html">contact</a></li>
-        </ul>
-    </nav>
-
-    <nav class="pc_hidden">
-        <ul class="filter-list sp_filter scroll-out">
-            <li data-filter="all" class="is-active">All</li>
-            <li data-filter="web">WEB site</li>
-            <li data-filter="banner">Banner</li>
-            <li data-filter="graphic">Graphic</li>
         </ul>
     </nav>
 
@@ -272,6 +263,15 @@
 
                 </div>
             </div>
+
+            <nav class="pc_hidden">
+                <ul class="filter-list sp_filter scroll-out">
+                    <li data-filter="all" class="is-active">All</li>
+                    <li data-filter="web">WEB site</li>
+                    <li data-filter="banner">Banner</li>
+                    <li data-filter="graphic">Graphic</li>
+                </ul>
+            </nav>
         </section>
 
         <section data-scroll-section class="scroll_section">
@@ -285,6 +285,7 @@
             </div>
         </section>
     </main>
+
     <script src="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
     "></script>
@@ -323,9 +324,9 @@
 
     <script>
         const sliderThumbnail = new Swiper("#swiper-thumb", {
-            direction: 'vertical',
+            direction: 'horizontal',
             loop: true,
-            slidesPerView: 3.5,
+            slidesPerView: 2,
             centerdSlides: true,
             speed: 500,
             spaceBetween: 10,
@@ -333,6 +334,18 @@
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                615: {
+                    direction: 'horizontal',
+                    slidesPerView: 3,
+                },
+            },
+            breakpoints: {
+                835: {
+                    direction: 'vertical',
+                    slidesPerView: 3.5,
+                },
             }
         });
         const slider = new Swiper("#swiper-main", {

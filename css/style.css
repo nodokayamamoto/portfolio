@@ -953,51 +953,6 @@ figure {
   cursor: url("../images/1x/cursor_click.png"), auto;
 }
 
-/* @media screen and (max-width: 1182px) {
-  .works-inner {
-    flex-direction: column;
-    height: 100%;
-    gap: 30px;
-  }
-
-  .works_head {
-    transform: rotate(90deg);
-    position: absolute;
-    top: 0;
-  }
-
-  .thumb-wrapper {
-    width: 500px;
-    height: 150px;
-    position: relative;
-  }
-
-  #swiper-thumb {
-    max-width: 500px;
-    width: 100%;
-    height: 150px;
-    margin: 0;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    margin: 0;
-    bottom: initial;
-    top: 50%;
-    transform: rotate(0) translateX(-50%);
-  }
-
-  .swiper-button-prev {
-    right: initial;
-    left: -40px;
-  }
-
-  .swiper-button-next {
-    right: -40px;
-    left: initial;
-  }
-} */
-
 /* swiper item */
 
 .wimg {

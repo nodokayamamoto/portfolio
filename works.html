@@ -7,12 +7,12 @@
     <title>DecoRa design works</title>
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/spstyle.css">
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
 </head>
 
 <body>
@@ -49,15 +49,6 @@
             <li><a href="about.html">about</a></li>
             <li><a href="works.html">works</a></li>
             <li><a href="contact.html">contact</a></li>
-        </ul>
-    </nav>
-
-    <nav class="pc_hidden">
-        <ul class="filter-list sp_filter scroll-out">
-            <li data-filter="all" class="is-active">All</li>
-            <li data-filter="web">WEB site</li>
-            <li data-filter="banner">Banner</li>
-            <li data-filter="graphic">Graphic</li>
         </ul>
     </nav>
 
@@ -333,15 +324,6 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 }
             })
         })
-    </script>
-
-    <script>
-        $(function () {
-            $(window).on("scroll touchmove", function () {
-                $(".scroll-out").stop();
-                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
-            });
-        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>

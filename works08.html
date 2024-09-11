@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav id="pc_nav_wrapper">
+        <ul id="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
+    <p class="back_btn back scroll-out">
+        <a href="javascript:void(0)" onclick="history.back()">back</a>
+    </p>
+
+    <img src="./images/1x/light.png" class="light detail_light" alt="light">
+    <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
+
+    <main data-scroll-container class="fadeUp">
+        <section data-scroll-section class="scroll_section">
+            <div class="detail_container">
+                <div>
+                    <h2>
+                        <img src="./images/SVG/head_detail.svg" class="detail_img shadow" alt="works detail">
+                    </h2>
+                    <p class="sp_hidden"><span>三光弓具店様（架空）</span></p>
+                    <div class="detail_left">
+                        <div>
+                            <p>LP</p>
+                        </div>
+                        <div class="detail_right">
+                            <div></div>
+                            <div class="flex">
+                                <p>design</p>
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <p>Adobe Illustrator</p>
+                            </div>
+                            <div class="flex">
+                                <p>coding</p>
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <p>VScode</p>
+                            </div>
+                            <p>text writing</p>
+                        </div>
+                    </div>
+                    <div class="detail_left">
+                        <div>
+                            <p>theme</p>
+                        </div>
+                        <div class="detail_right">
+                            <p>和の伝統<br>
+                                シンプル<br>
+                                職人らしさ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail_first">
+                    <img src="./images/1x/works08_1.jpg" alt="自主制作LP">
+                    <p class="pc_hidden"><span>三光弓具店様（架空）</span></p>
+                    <p>30代～40代の若手弓道家向けに、老舗弓具店の認知拡大目的を想定したLPを制作しました。<br>
+                        『職人の手仕事』と『全国へ手渡し』という二本柱をアピールポイントにしています。<br>
+                        制作にかかった時間はデザイン（ライティング・ロゴおよびマップ制作含む）に8時間、コーディングに12時間です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section data-scroll-section class="scroll_section bottom">
+            <h3></h3>
+            <div class="detail_flex">
+                <div>
+                    <img src="./images/1x/works08_2.jpg" alt="自主制作LP">
+                    <p>弓道の的をイメージして、全体的にモノトーンを使用しています。<br>
+                        和紙の質感を重ねたり、矢の動きをイメージした流れるようなアニメーションを各所に配置し、のっぺりとした印象にならないよう注意しました。<br>
+                        また写真素材をそのまま使用するのではなく、被写体と伝えたいメッセージが引き立つよう、加工にもこだわっています（写真加工にはAdobe Photoshopを使用）
+                    </p>
+                </div>
+                <div>
+                    <img src="./images/1x/works08_3.jpg" alt="自主制作LP">
+                    <p>レスポンシブでも見やすいデザインはもちろんのこと、触ると的の形になるハンバーガーメニュー、流れる矢のアニメーションなど、ユーザーを飽きさせない遊び心も取り入れました。<br>
+                        またシンプルながらも、職人の人柄やストーリー性の感じられるライティングも意識しています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+
+    <script>
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle().toggleClass('open');
+                $('#sp_btn').toggleClass('open');
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
+    </script>
+
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                    tablet: {
+                        direction: 'horizontal',
+                        smooth: true,
+                    },
+                    smartphone: {
+                        direction: 'vertical',
+                        smooth: false,
+                    }
+                })
+            })
+        })()
+    </script>
+</body>
+
+</html>

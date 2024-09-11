@@ -593,6 +593,14 @@
       0 0 0.8em rgba(255, 255, 255, 0.3);
   }
 
+  @media screen and (max-width: 514px) {
+    .filter-list.sp_filter li {
+      width: 90px;
+      font-size: 14px;
+      padding: 0 5px;
+    }
+  }
+
   .works_head {
     margin: 0;
     width: 30px;

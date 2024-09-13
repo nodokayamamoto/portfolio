@@ -772,6 +772,9 @@ body:before {
 
 .works_head {
   width: 40px;
+  position: absolute;
+  top: 180px;
+  z-index: 300;
 }
 
 .works_contact {

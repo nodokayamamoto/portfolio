@@ -67,15 +67,15 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" data-item="web,graphic">
                                 <figure class="slide">
-                                    <a href="works01.html">
-                                        <div class="slide-media">
+                                    <div class="slide-media">
+                                        <a href="works01.html">
                                             <div class="works01_img">
                                                 <div class="wimg src1"></div>
                                                 <div class="wimg src2"></div>
                                                 <div class="wimg src3"></div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                     <div class="slide-text">
                                         <figcaption class="slide-title">むぎゅハウス様</figcaption>
                                         <figcaption class="slide-category">WEBsite | Pumphlet | Flyer</figcaption>
@@ -381,10 +381,7 @@
             var slider = new Swiper("#swiper-main", {
                 loop: true,
                 slidesPerView: 1,
-                speed: 2000,
-                autoplay: {
-                    delay: 2000
-                },
+                speed: 3000,
                 centeredSlides: true,
                 watchSlidesProgress: true,
                 pagination: {
@@ -392,11 +389,8 @@
                 },
                 thumbs: {
                     swiper: sliderThumbnail,
-
-                },
-                controller: {
-                    control: sliderThumbnail,
-                },
+                
+                }
             })
 
             var $filter = $('.filter-list [data-filter]')
@@ -426,8 +420,8 @@
                     updateSwiper($activeItems)
                 }
             })
-
-
+                                
+                                
             function updateSwiper($activeItems) {
                 slider.destroy(true, true);
                 $('#swiper-main .swiper-wrapper').html('');
@@ -439,10 +433,7 @@
                 slider = new Swiper('#swiper-main', {
                     loop: true,
                     slidesPerView: 1,
-                    speed: 2000,
-                    autoplay: {
-                        delay: 2000
-                    },
+                    speed: 3000,
                     centeredSlides: true,
                     watchSlidesProgress: true,
                     pagination: {
@@ -450,13 +441,10 @@
                     },
                     thumbs: {
                         swiper: sliderThumbnail,
-
-                    },
-                    controller: {
-                        control: sliderThumbnail,
-                    },
+                    
+                    }
                 });
-                sliderThumbnail.update();
+
                 slider.update();
             }
         })

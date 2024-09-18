@@ -864,14 +864,10 @@ body:before {
   margin: 0;
 }
 
-#swiper-thumb:hover {
-  .swiper-slide:not(:hover) {
-    @media only screen and (min-width: 1025px) {
-      opacity: 0.5;
-      filter: grayscale(100%);
-      transition: all 1s;
-    }
-  }
+#swiper-thumb:hover.swiper-slide:not(:hover) {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: all 1s;
 }
 
 figure {

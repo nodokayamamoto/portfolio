@@ -353,7 +353,97 @@
 
     <script>
         $(function () {
-            const sliderThumbnail = new Swiper("#swiper-thumb", {
+            var sliderThumbnail = new Swiper("#swiper-thumb", {
+                direction: 'horizontal',
+                loop: true,
+                slidesPerView: 2,
+                centerdSlides: true,
+                speed: 3000,
+                autoplay: true,
+                allowTouchMove: false,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    615: {
+                        direction: 'horizontal',
+                        slidesPerView: 3,
+                    },
+                },
+                breakpoints: {
+                    835: {
+                        direction: 'vertical',
+                        slidesPerView: 3.5,
+                    },
+                }
+            });
+
+            var slider = new Swiper("#swiper-main", {
+                loop: true,
+                slidesPerView: 1,
+                autoplay: true,
+                speed: 3000,
+                centeredSlides: true,
+                watchSlidesProgress: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                thumbs: {
+                    swiper: sliderThumbnail,
+                
+                }
+            })
+
+            var $filter = $('.filter-list [data-filter]')
+            var $item = $('.filter-item [data-item]')
+            var allSlides = $('#swiper-main .swiper-slide')
+            var allThumbs = $('#swiper-thumb .swiper-slide').clone(); 
+
+            $filter.click(function (event) {
+                event.preventDefault()
+                var $this = $(this)
+
+                $('.swiper-slide').show()
+                allThumbs.show()
+                updateSwiper(allSlides, allThumbs)
+
+                var $filterItem = $this.attr('data-filter')
+
+                if ($filterItem == 'all') {
+                    $('.swiper-slide').show()
+                    updateSwiper(allSlides, allThumbs)
+                } else {
+                    $('.swiper-slide').filter(function () {
+                        var categories = $(this).data('item').split(',')
+                        if (!categories.includes($filterItem)) {
+                            $(this).hide()
+                        }
+                    })
+                    const $activeItems = allSlides.filter(':visible')
+                    var $activeThumbs = allThumbs.filter(function () {
+                        var categories = $(this).data('item').split(',');
+                        return categories.includes($filterItem);
+                    });
+                    updateSwiper($activeItems, $activeThumbs)
+                }
+            })
+                                
+                                
+            function updateSwiper($activeItems, $activeThumbs) {
+                slider.destroy(true, true);
+                sliderThumbnail.destroy(true, true);
+                $('#swiper-main .swiper-wrapper').html('');
+                $('#swiper-thumb .swiper-wrapper').html('');
+
+                $activeItems.each(function (index, element) {
+                    $('#swiper-main .swiper-wrapper').append($(element));
+                });
+                $activeThumbs.each(function (index, element) {
+                    $('#swiper-thumb .swiper-wrapper').append($(element).clone());
+                });
+
+                sliderThumbnail = new Swiper("#swiper-thumb", {
                 direction: 'horizontal',
                 loop: true,
                 slidesPerView: 2,
@@ -378,58 +468,6 @@
                 }
             });
 
-            var slider = new Swiper("#swiper-main", {
-                loop: true,
-                slidesPerView: 1,
-                speed: 3000,
-                centeredSlides: true,
-                watchSlidesProgress: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                thumbs: {
-                    swiper: sliderThumbnail,
-                
-                }
-            })
-
-            var $filter = $('.filter-list [data-filter]')
-            var $item = $('.filter-item [data-item]')
-            var allSlides = $('#swiper-main .swiper-slide')
-
-            $filter.click(function (event) {
-                event.preventDefault()
-                var $this = $(this)
-
-                $('.swiper-slide').show()
-                updateSwiper(allSlides)
-
-                var $filterItem = $this.attr('data-filter')
-
-                if ($filterItem == 'all') {
-                    $('.swiper-slide').show()
-                    updateSwiper(allSlides)
-                } else {
-                    $('.swiper-slide').filter(function () {
-                        var categories = $(this).data('item').split(',')
-                        if (!categories.includes($filterItem)) {
-                            $(this).hide()
-                        }
-                    })
-                    const $activeItems = allSlides.filter(':visible')
-                    updateSwiper($activeItems)
-                }
-            })
-                                
-                                
-            function updateSwiper($activeItems) {
-                slider.destroy(true, true);
-                $('#swiper-main .swiper-wrapper').html('');
-
-                $activeItems.each(function (index, element) {
-                    $('#swiper-main .swiper-wrapper').append($(element));
-                });
-
                 slider = new Swiper('#swiper-main', {
                     loop: true,
                     slidesPerView: 1,
@@ -441,7 +479,6 @@
                     },
                     thumbs: {
                         swiper: sliderThumbnail,
-                    
                     }
                 });
 

@@ -134,15 +134,28 @@
                                     </figure>
                                 </a>
                             </div>
-                            <div class="swiper-slide" data-item="graphic">
-                                <a href="graphic02.html">
+                            <div class="swiper-slide" data-item="banner">
+                                <a href="banner07.html">
                                     <figure class="slide">
                                         <div class="slide-media">
-                                            <img src="./images/1x/graphic02.png" alt="パンフレット制作実績">
+                                            <img src="./images/1x/banner07.png" alt="バナー制作実績">
                                         </div>
                                         <div class="slide-text">
-                                            <figcaption class="slide-title">一般社団法人デイジー様</figcaption>
-                                            <figcaption class="slide-category">Pumphlet</figcaption>
+                                            <figcaption class="slide-title">Sample Banner</figcaption>
+                                            <figcaption class="slide-category">Banner</figcaption>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" data-item="banner">
+                                <a href="banner08.html">
+                                    <figure class="slide">
+                                        <div class="slide-media">
+                                            <img src="./images/1x/banner08.png" alt="バナー制作実績">
+                                        </div>
+                                        <div class="slide-text">
+                                            <figcaption class="slide-title">Sample Banner</figcaption>
+                                            <figcaption class="slide-category">Banner</figcaption>
                                         </div>
                                     </figure>
                                 </a>
@@ -225,6 +238,19 @@
                                     </figure>
                                 </a>
                             </div>
+                            <div class="swiper-slide" data-item="graphic">
+                                <a href="graphic02.html">
+                                    <figure class="slide">
+                                        <div class="slide-media">
+                                            <img src="./images/1x/graphic02.png" alt="パンフレット制作実績">
+                                        </div>
+                                        <div class="slide-text">
+                                            <figcaption class="slide-title">一般社団法人デイジー様</figcaption>
+                                            <figcaption class="slide-category">Pumphlet</figcaption>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
                         </div>
                         <!-- オプション：ページネーション -->
                         <div class="swiper-pagination"></div>
@@ -248,8 +274,11 @@
                                 <div class="swiper-slide" data-item="web">
                                     <div class="thumb-media"><img src="./images/1x/works03.png" alt=""></div>
                                 </div>
-                                <div class="swiper-slide" data-item="graphic">
-                                    <div class="thumb-media"><img src="./images/1x/graphic02.png" alt=""></div>
+                                <div class="swiper-slide" data-item="banner">
+                                    <div class="thumb-media"><img src="./images/1x/banner07.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide" data-item="banner">
+                                    <div class="thumb-media"><img src="./images/1x/banner08.png" alt=""></div>
                                 </div>
                                 <div class="swiper-slide" data-item="banner">
                                     <div class="thumb-media"><img src="./images/1x/banner01.png" alt=""></div>
@@ -268,6 +297,9 @@
                                 </div>
                                 <div class="swiper-slide" data-item="banner">
                                     <div class="thumb-media"><img src="./images/1x/banner06.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide" data-item="graphic">
+                                    <div class="thumb-media"><img src="./images/1x/graphic02.png" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -353,12 +385,13 @@
 
     <script>
         $(function () {
-            const sliderThumbnail = new Swiper("#swiper-thumb", {
+            var sliderThumbnail = new Swiper("#swiper-thumb", {
                 direction: 'horizontal',
                 loop: true,
                 slidesPerView: 2,
                 centerdSlides: true,
-                speed: 500,
+                speed: 1000,
+                autoplay: true,
                 allowTouchMove: false,
                 navigation: {
                     nextEl: ".swiper-button-next",
@@ -381,10 +414,8 @@
             var slider = new Swiper("#swiper-main", {
                 loop: true,
                 slidesPerView: 1,
-                speed: 2000,
-                autoplay: {
-                    delay: 2000
-                },
+                autoplay: true,
+                speed: 3000,
                 centeredSlides: true,
                 watchSlidesProgress: true,
                 pagination: {
@@ -393,28 +424,27 @@
                 thumbs: {
                     swiper: sliderThumbnail,
 
-                },
-                controller: {
-                    control: sliderThumbnail,
-                },
+                }
             })
 
             var $filter = $('.filter-list [data-filter]')
             var $item = $('.filter-item [data-item]')
             var allSlides = $('#swiper-main .swiper-slide')
+            var allThumbs = $('#swiper-thumb .swiper-slide').clone();
 
             $filter.click(function (event) {
                 event.preventDefault()
                 var $this = $(this)
 
                 $('.swiper-slide').show()
-                updateSwiper(allSlides)
+                allThumbs.show()
+                updateSwiper(allSlides, allThumbs)
 
                 var $filterItem = $this.attr('data-filter')
 
                 if ($filterItem == 'all') {
                     $('.swiper-slide').show()
-                    updateSwiper(allSlides)
+                    updateSwiper(allSlides, allThumbs)
                 } else {
                     $('.swiper-slide').filter(function () {
                         var categories = $(this).data('item').split(',')
@@ -423,26 +453,57 @@
                         }
                     })
                     const $activeItems = allSlides.filter(':visible')
-                    updateSwiper($activeItems)
+                    var $activeThumbs = allThumbs.filter(function () {
+                        var categories = $(this).data('item').split(',');
+                        return categories.includes($filterItem);
+                    });
+                    updateSwiper($activeItems, $activeThumbs)
                 }
             })
 
 
-            function updateSwiper($activeItems) {
+            function updateSwiper($activeItems, $activeThumbs) {
                 slider.destroy(true, true);
+                sliderThumbnail.destroy(true, true);
                 $('#swiper-main .swiper-wrapper').html('');
+                $('#swiper-thumb .swiper-wrapper').html('');
 
                 $activeItems.each(function (index, element) {
                     $('#swiper-main .swiper-wrapper').append($(element));
+                });
+                $activeThumbs.each(function (index, element) {
+                    $('#swiper-thumb .swiper-wrapper').append($(element).clone());
+                });
+
+                sliderThumbnail = new Swiper("#swiper-thumb", {
+                    direction: 'horizontal',
+                    loop: true,
+                    slidesPerView: 2,
+                    centerdSlides: true,
+                    speed: 500,
+                    allowTouchMove: false,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints: {
+                        615: {
+                            direction: 'horizontal',
+                            slidesPerView: 3,
+                        },
+                    },
+                    breakpoints: {
+                        835: {
+                            direction: 'vertical',
+                            slidesPerView: 3.5,
+                        },
+                    }
                 });
 
                 slider = new Swiper('#swiper-main', {
                     loop: true,
                     slidesPerView: 1,
-                    speed: 2000,
-                    autoplay: {
-                        delay: 2000
-                    },
+                    speed: 3000,
                     centeredSlides: true,
                     watchSlidesProgress: true,
                     pagination: {
@@ -450,14 +511,11 @@
                     },
                     thumbs: {
                         swiper: sliderThumbnail,
-
-                    },
-                    controller: {
-                        control: sliderThumbnail,
-                    },
+                    }
                 });
-                sliderThumbnail.update();
+
                 slider.update();
+                slider.slideTo(0);
             }
         })
     </script>

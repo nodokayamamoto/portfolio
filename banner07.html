@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoRa design works</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/spstyle.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="main.html"><span>DecoRa</span> design works</a></h1>
+    </header>
+
+    <nav id="pc_nav_wrapper">
+        <ul id="pc_nav">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <div id="sp_btn">
+        <span></span>
+    </div>
+
+    <nav id="sp_nav">
+        <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
+    <p class="back_btn back scroll-out">
+        <a href="javascript:void(0)" onclick="history.back()">back</a>
+    </p>
+
+    <img src="./images/1x/light.png" class="light banner_light" alt="light">
+    <p class="copy_write scroll-out">©DecoRa design works all rights reserved.</p>
+
+    <main class="fadeUp">
+        <section>
+            <div class="banner_container">
+                <h2>
+                    <img src="./images/SVG/head_detail.svg" class="detail_img shadow" alt="works detail">
+                </h2>
+                <div class="banner_flex">
+                    <p class="sp_hidden"><span>Banner Sample</span></p>
+                    <div class="detail_right">
+                        <div></div>
+                        <div class="flex">
+                            <p>design</p>
+                            <div class="line">
+                                <hr>
+                            </div>
+                            <p>Adube Photoshop</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner_flex">
+                    <p class="pc_hidden"><span>Banner Sample</span></p>
+                    <img src="./images/1x/banner07_1.jpg" class="square" alt="Banner Sample">
+                </div>
+                <div class="detail_first">
+                    <p>30代 男性向けのパーソナルトレーニングジムの広告バナーです。<br>
+                        余白をめいっぱい使った、力強くインパクトのあるデザインでユーザーの目を引き、強い印象を残します。<br>
+                        理想の身体づくりができ、頼りがいのあるジムであることをアピールしました。<br>
+                        制作時間は2時間です。
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script>
+        $(function () {
+            $('#sp_btn').on('click', function () {
+                $('#sp_nav').fadeToggle().toggleClass('open');
+                $('#sp_btn').toggleClass('open');
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll touchmove", function () {
+                $(".scroll-out").stop();
+                $(".scroll-out").css("display", "none").delay(500).fadeIn('slow');
+            });
+        });
+    </script>
+</body>
+
+</html>
